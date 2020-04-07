@@ -1,0 +1,424 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>March, 2020 - Azure AD B2C</title>
+<meta name="description" content="Want to become a pro in B2C? We are here to help ">
+
+
+  <meta name="author" content="Azure AD B2C">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Azure AD B2C">
+<meta property="og:title" content="March, 2020">
+<meta property="og:url" content="http://localhost:4000/previous_wiki_backup/Azure-AD-B2C-Change-log/">
+
+
+  <meta property="og:description" content="Want to become a pro in B2C? We are here to help ">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.png">
+
+
+
+  <meta name="twitter:site" content="@mmistakes">
+  <meta name="twitter:title" content="March, 2020">
+  <meta name="twitter:description" content="Want to become a pro in B2C? We are here to help ">
+  <meta name="twitter:url" content="http://localhost:4000/previous_wiki_backup/Azure-AD-B2C-Change-log/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/assets/images/site-logo.png">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/previous_wiki_backup/Azure-AD-B2C-Change-log/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Michael Rose",
+      "url": "http://localhost:4000/",
+      "sameAs": ["https://twitter.com/mmistakes","https://www.facebook.com/michaelrose"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y" />
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Azure AD B2C Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--default">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/b2c-logo.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          Azure AD B2C
+          <span class="site-subtitle">Community</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/what-is-azuread-b2c/">Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <h2 id="march-2020">March, 2020</h2>
+<ul>
+  <li>[New] Phone factor technical profile supports auto dial. For more information check the <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/phone-factor-technical-profile#metadata">metadata</a>.</li>
+  <li>[Update] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/custom-policy-keep-me-signed-in">Keep me signed in (KMSI)</a> page layout version 1.2.0 and above requires <code class="language-plaintext highlighter-rouge">setting.enableRememberMe</code> metadata.</li>
+  <li>[New] Secure a REST API technical profile with <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/secure-rest-api#oauth2-bearer-authentication">bearer token</a></li>
+  <li>[New] Azure AD B2C UI supports (in GA) Safari for iOS and macOS, version 12 and above <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/customize-ui-overview#custom-html-and-css">doc link</a></li>
+  <li>Documentation
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/best-practices">Recommendations and best practices for Azure Active Directory B2C</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/user-profile-attributes">User profile attributes</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/phone-factor-technical-profile">Phone factor technical profile</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/application-insights-technical-profile">Application Insights technical profile </a></li>
+    </ul>
+  </li>
+  <li>[New] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/claim-resolver-overview">claim resolvers</a> <code class="language-plaintext highlighter-rouge">{OIDC:scope}</code>, <code class="language-plaintext highlighter-rouge">{OIDC:RedirectUri}</code>, <code class="language-plaintext highlighter-rouge">{Context:KMSI}</code> and <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/claim-resolver-overview#saml">SAML claims resolvers</a></li>
+  <li>[New] Azure AD attribute <code class="language-plaintext highlighter-rouge">signInNames</code> the unique sign in name of the local account user of <strong>any type</strong> in the directory . Use this to get a user with sign in value without specifying the local account type. For more information, see <a href="https://github.com/azure-ad-b2c/samples/tree/master/policies/username-or-email">Sign In and Sign Up with Username or Email sample</a>
+    <h2 id="february-2020">February, 2020</h2>
+  </li>
+  <li>[Document] Learn how to:
+    <ul>
+      <li><a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/custom-email#optional-localize-your-email">Localize your custom verification email</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/microsoft-graph-get-started?tabs=applications">Manage Azure AD B2C with Microsoft Graph</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/manage-user-accounts-graph-api">Manage Azure AD B2C user accounts with Microsoft Graph</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/deploy-custom-policies-devops">Deploy custom policies with Azure Pipelines</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/manage-custom-policies-powershell">Manage Azure AD B2C custom policies with Azure PowerShell</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/custom-policy-ui-customization#guidelines-for-using-custom-page-content">Guidelines for using custom page content</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/claimsschema#datatype">Claim data types</a> and <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/claimsschema#userinputtype">UserInputType</a></li>
+    </ul>
+  </li>
+  <li>[New] Use <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/azure-monitor">Azure Monitor</a> to route Azure Azure AD B2C usage activity events to different monitoring solutions.</li>
+  <li>[New] Claims transformations:
+    <ul>
+      <li>Boolean: <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/boolean-transformations#comparebooleanclaimtovalue">Compare Boolean claim to value</a>.</li>
+      <li>Date: <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/date-transformations#convertdatetimetodateclaim">Convert DateTime to Date claim</a></li>
+      <li>General: <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/general-transformations#copyclaim">Copy claim</a></li>
+      <li>String: <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/string-transformations#stringcontains">String contains</a>, <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/string-transformations#stringsubstring">Substring</a>, <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/string-transformations#stringreplace">Find and replace</a>, <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/string-transformations#stringjoin">String join</a>,<a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/string-transformations#stringsplit"> String split</a>, <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/string-transformations#setclaimsifregexmatch">Set claims if Regex match</a>, <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/string-transformations#getlocalizedstringstransformation">Copies localized strings into claims</a></li>
+      <li>StringCollection: <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/stringcollection-transformations#stringcollectioncontains">String collection contains</a></li>
+      <li>PhoneNumber: <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/phone-number-claims-transformations#convertphonenumberclaimtostring">ConvertPhoneNumberClaimToString</a>, now you can convert a phoneNumber data type back into a string data type.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="january-2020">January, 2020</h2>
+<ul>
+  <li>[New] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/code-samples#web-apps-and-apis">Python web app sample</a> - Demonstrate how to Integrate B2C of Microsoft identity platform with a Python web application.</li>
+  <li>[New] Logout force to pass a previously issued ID token to the logout endpoint as a hint about the end user’s current authenticated session with the client, is now supported with custom policies using <code class="language-plaintext highlighter-rouge">EnforceIdTokenHintOnLogout</code> attribute of the <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/relyingparty#singlesignon">SingleSignOn</a> element.</li>
+  <li>[New] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/customize-ui-overview#company-branding-preview">Company branding (preview)</a> - You can customize your user flow pages with a banner logo, background image, and background color by using Azure Active Directory Company branding</li>
+  <li>[Update] The Microsoft Azure AD B2C service is compatible with SameSite browser configurations, including support for SameSite=None with the Secure attribute. For more information, see <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/cookie-definitions">Azure AD B2C Cookie Definitions</a></li>
+</ul>
+
+<h2 id="december-2019">December, 2019</h2>
+
+<ul>
+  <li>[Update] Azure Active Directory B2C is <a href="https://azure.microsoft.com/en-us/updates/b2c-deprecate-msol/">deprecating login.microsoftonline.com</a></li>
+  <li>[New] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/multi-factor-auth-technical-profile">Azure MFA technical profile</a> provides support for verifying a phone number by using Azure Multi-Factor Authentication (MFA).</li>
+  <li>[New] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/phone-number-claims-transformations">phone number claims transformations</a></li>
+  <li>[New] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/phone-authentication">Phone sign-up and sign-in</a> in Azure AD B2C enables your users to sign up and sign in to your applications by using a one-time password (OTP)</li>
+  <li>[New] SAML app registration, <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/connect-with-saml-service-providers">learn how to configure Azure AD B2C to act as a SAML identity provider to your web applications.</a></li>
+  <li>[New] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/display-controls">Display Controls</a> is a new user interface element that has special functionality and interacts with the Azure Active Directory B2C (Azure AD B2C) back-end service. It allows the user to perform actions on the page that invoke a validation technical profile at the back end.  Use a <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/display-control-verification">Verification Display Control</a> to verify a claim, for example an email address or phone number, with a verification code sent to the user.</li>
+  <li>[New] Self-Asserted technical profile, now supports <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/self-asserted-technical-profile#display-claims">Display Claims</a> with reference to claim types and display controls.</li>
+  <li>[New] Azure AD B2C now provides support for managing the generation and verification of a one-time password. Use the <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/one-time-password-technical-profile">OTP technical profile</a> to generate a code, and then verify that code later.</li>
+  <li>[New] REST API technical profile, support of <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/restful-technical-profile#send-a-json-payload">JSON payload input claim</a></li>
+  <li>[New] REST API technical profile, support of sending bearer token that is stored in a policy key. Use <code class="language-plaintext highlighter-rouge">AuthenticationType</code> metadata to <code class="language-plaintext highlighter-rouge">Bearer</code></li>
+  <li>[New] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/json-transformations">GenerateJson</a> claims trnsfomation generates a complex JSON using input claim and input parameters.</li>
+  <li>[New] Use <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/custom-email">custom email</a> in Azure AD B2C to send customized email to users that sign up to use your applications.</li>
+</ul>
+
+<h2 id="november-2019">November, 2019</h2>
+<ul>
+  <li>
+    <p>[New] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/manage-users-portal">Use the Azure portal to create and delete consumer users in Azure AD B2C</a></p>
+  </li>
+  <li>
+    <p>[New] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-register-applications?tabs=applications">app registration experience</a>. With the new UX (in preview), you manage your Azure AD and Azure AD B2C applications in the same place.</p>
+  </li>
+  <li>
+    <p>[Update] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-how-to-enable-billing">Azure Active Directory B2C Monthly Active Users (MAU) pricing model</a></p>
+  </li>
+  <li>
+    <p>[Fix] When using <code class="language-plaintext highlighter-rouge">AlwaysUseDefaultValue</code> (in input claims or output claims) with a <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/claim-resolver-overview">claim resolver</a> . If the claim resolve is missing, B2C returns an empty string (without error message). For example, if the query string parameter <code class="language-plaintext highlighter-rouge">idp</code> is missing, the <code class="language-plaintext highlighter-rouge">selected_idp</code> contains an empty string.</p>
+
+    <pre><code class="language-XML">  &lt;InputClaim ClaimTypeReferenceId="selected_idp" DefaultValue="{OAUTH-KV:idp}" AlwaysUseDefaultValue="true" /&gt;
+</code></pre>
+  </li>
+</ul>
+
+<InputClaim ClaimTypeReferenceId="selected_idp" DefaultValue="{OAUTH-KV:custom_param}" AlwaysUseDefaultValue="true" />
+
+<h2 id="october-2019">October, 2019</h2>
+<ul>
+  <li>
+    <p>[New] <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-reference-threat-management#manage-password-protection-settings">Manage password protection settings</a></p>
+  </li>
+  <li>
+    <p>[New] <a href="https://docs.microsoft.com/en-us/graph/api/resources/identityuserflow?view=graph-rest-beta">Use MS Graph API to perform CRUD operations against User Flows</a></p>
+  </li>
+  <li>
+    <p>[New] <a href="https://docs.microsoft.com/en-us/graph/api/resources/trustframeworkpolicy?view=graph-rest-beta">Use MS Graph API to perform CRUD operations against Custom Policies</a></p>
+  </li>
+  <li>
+    <p>[New] <a href="https://docs.microsoft.com/en-us/graph/api/resources/trustframeworkkeyset?view=graph-rest-beta">Use MS Graph API to perform CRUD operations against IEF Key Containers</a></p>
+
+    <ul>
+      <li>[New] <a href="https://github.com/Azure-Samples/ActiveDirectory-B2C-MSGraph-PolicyAndKeysets">MS Graph API samples</a> for User Flow, Custom Policies, and Key CRUD operations.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="august-2019">August, 2019</h2>
+<ul>
+  <li>[New] Pass through an identity provider’s access token in Azure AD B2C with <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/idp-pass-through-user-flow">user flow</a> and <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/idp-pass-through-custom">custom policy</a></li>
+</ul>
+
+<h2 id="may-2019">May, 2019</h2>
+<ul>
+  <li>[New] <a href="https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles#b2c-user-flow-administrator">Azure AD admin roles for B2C are in public preview</a></li>
+</ul>
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <div align="center" style="margin: 1em 0;">
+        <ins class="adsbygoogle"
+             style="display:block; border-bottom: initial;"
+             data-ad-client="ca-pub-7328585512091257"
+             data-ad-slot="3049671934"
+             data-ad-format="auto"></ins>
+        </div>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://stackoverflow.com/questions/tagged/azure-ad-b2c" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stackoverflow</a></li>
+        
+      
+        
+          <li><a href="https://github.com/azure-ad-b2c" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://woodgrovegroceriesb2cdemo.azurewebsites.net/" rel="nofollow noopener noreferrer"><i class="fas fa-laptop" aria-hidden="true"></i> Demo Site</a></li>
+        
+      
+        
+          <li><a href="https://azure.microsoft.com/en-us/services/active-directory-b2c/" rel="nofollow noopener noreferrer"><i class="fab fa-microsoft" aria-hidden="true"></i> Offical docs</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/results?search_query=azure+ad+b2c" rel="nofollow noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Michael Rose. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'QB6HVGBSBA',
+  apiKey: '9d5014e5bbc77372547bce778dfa5663',
+  indexName: 'minimal_mistakes',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+// Starting the search
+search.start();
+</script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

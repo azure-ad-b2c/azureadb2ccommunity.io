@@ -1,0 +1,1007 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Concepts - Azure AD B2C</title>
+<meta name="description" content="Custom policy concepts ">
+
+
+  <meta name="author" content="Vinu">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Azure AD B2C">
+<meta property="og:title" content="Concepts">
+<meta property="og:url" content="http://localhost:4000/docs/custom-policy-concepts/">
+
+
+  <meta property="og:description" content="Custom policy concepts ">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.png">
+
+
+
+  <meta name="twitter:site" content="@mmistakes">
+  <meta name="twitter:title" content="Concepts">
+  <meta name="twitter:description" content="Custom policy concepts ">
+  <meta name="twitter:url" content="http://localhost:4000/docs/custom-policy-concepts/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/assets/images/site-logo.png">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-04-07T04:39:45-04:00">
+
+
+
+  <meta property="article:modified_time" content="2020-04-06T21:36:11-04:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/docs/custom-policy-concepts/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Michael Rose",
+      "url": "http://localhost:4000/",
+      "sameAs": ["https://twitter.com/mmistakes","https://www.facebook.com/michaelrose"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y" />
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Azure AD B2C Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/b2c-logo.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          Azure AD B2C
+          <span class="site-subtitle">Community</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/what-is-azuread-b2c/">Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Basics</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/what-is-azuread-b2c/">What is Azure AD B2C?</a></li>
+          
+            <li><a href="/docs/identity-fundamentals/">Identity fundamentals</a></li>
+          
+            <li><a href="/docs/azuread-b2c-policies/">Policies</a></li>
+          
+            <li><a href="/docs/app-integration/">App Integration</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Customization</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/Customization/">UI customization</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Custom policies</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/docs/custom-policy-concepts/" class="active">Concepts</a></li>
+          
+            <li><a href="/docs/xml-elements/">XML elements</a></li>
+          
+            <li><a href="/docs/custom-policy-code-walkthrough/">Code walkthrough</a></li>
+          
+            <li><a href="/docs/custom-policy-best-practices/">Best practices</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Concepts">
+    <meta itemprop="description" content="Custom policy concepts">
+    
+    <meta itemprop="dateModified" content="2020-04-06T21:36:11-04:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Concepts
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#identity-and-claims-exchange">Identity and claims exchange</a>
+    <ul>
+      <li><a href="#sign-in-with-local-account-flow">Sign-in with local account flow</a></li>
+      <li><a href="#sign-in-with-social-account-flow">Sign-in with social account flow</a></li>
+      <li><a href="#claims-exchange">Claims Exchange</a></li>
+      <li><a href="#claims-definitions">Claims Definitions</a></li>
+      <li><a href="#claims-mapping-and-default-value">Claims mapping and default value</a></li>
+      <li><a href="#claims-transformations">Claims transformations</a></li>
+    </ul>
+  </li>
+  <li><a href="#technical-profile">Technical profile</a>
+    <ul>
+      <li><a href="#validation-technical-profile">Validation technical profile</a></li>
+      <li><a href="#integration-with-line-of-business-applications">Integration with line of business applications</a></li>
+    </ul>
+  </li>
+  <li><a href="#user-journey">User Journey</a>
+    <ul>
+      <li><a href="#local-and-social-accounts-user-journey">Local and social accounts user journey</a></li>
+      <li><a href="#preconditions">Preconditions</a></li>
+    </ul>
+  </li>
+  <li><a href="#policy-structure">Policy structure</a>
+    <ul>
+      <li><a href="#policy-execution">Policy execution</a></li>
+      <li><a href="#policy-file-structure">Policy file structure</a></li>
+      <li><a href="#relying-party-policy-endpoints">Relying party policy endpoints</a></li>
+    </ul>
+  </li>
+  <li><a href="#customize-your-policy">Customize your policy</a>
+    <ul>
+      <li><a href="#content-definitions">Content definitions</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="introduction">Introduction</h2>
+
+<p>In this training we will be taking a closer look at what Azure AD B2C custom policies are. Many times when “custom policies” are mentioned, we are referring to the underlying policy within Identity Experience Framework (IEF). The following will describe what an Azure AD B2C policy is comprised of and how a user experience is generated.</p>
+
+<p>With Azure AD B2C custom policies, you are not limited to the sign-up or sign-in, password reset and edit profile policies/journeys. You can create any policy you would like. Such as:</p>
+
+<ul>
+  <li>Link and unlink a social account to local or vice versa.</li>
+  <li>Allow a user to change their sign-in email address, or MFA phone number.</li>
+  <li>Invite a user to Azure AD B2C.</li>
+  <li>ROPC based flows - A non-interactive flow, commonly used with mobile applications.</li>
+  <li>Magic link - Where users can redeem an account with a link you send them, or launch any custom user journey.</li>
+  <li>Sign in and migrate accounts - Allows you to migrate user accounts from any legacy identity provider to Azure AD B2C just in time.</li>
+</ul>
+
+<h2 id="identity-and-claims-exchange">Identity and claims exchange</h2>
+
+<p>Azure AD B2C is backed by a global, highly available, and secure <strong>cloud identity service</strong> and <strong>directory service</strong>. During policy execution, such as sign-up or sign-in, Azure AD B2C policy exchanges claims with a variety of systems, both having the ability to send and receive claims in either direction.</p>
+
+<h3 id="sign-in-with-local-account-flow">Sign-in with local account flow</h3>
+<p>This diagram depicts the Sign-in with local account flow using a “sign-up or sign-in” policy.</p>
+
+<p><img src="/assets/images/docs/claims_exchange_local_account.png" alt="Claims exchange with local account" /></p>
+
+<ol>
+  <li>
+    <p>The user starts their journey by opening their application and clicking on sign-in button. The user is redirected to Azure AD B2C to complete the sign-up or sign-in flow.</p>
+  </li>
+  <li>
+    <p>In this example, the user chooses to sign-in with a local account (an account that is fully managed by Azure AD B2C). 
+The user provides their email and password. Internally, the email address is cross referenced against the signInNames user attribute.</p>
+  </li>
+  <li>
+    <p>The user clicks “Sign In”. Azure AD B2C validates the credentials provided by the user. If the user provided the correct credentials, Azure AD B2C reads various user object properties from the directory, such as display name, first name, last name and more.</p>
+  </li>
+  <li>
+    <p>Azure AD B2C finally redirects the user back to the application with a token that was issued.</p>
+  </li>
+</ol>
+
+<p>At a high level, this outlines the flow of a local account sign-in journey. In these steps, Azure AD B2C exchanges claims with other systems.</p>
+
+<p><strong>First step</strong>, the application sends information to execute the authorization request, such as the Azure AD B2C policy Id.</p>
+
+<p><strong>Second step</strong>, the user provided their credentials, this translates to the “username” and “password” claims being provided by the user. This is a claims exchange, and this claims exchange is called “self-asserted”.</p>
+
+<p><strong>Third step</strong>, Azure AD B2C reads the user object from the directory. Sending the username claim and getting back the requested claims about the user.</p>
+
+<p><strong>Fourth step</strong>, Azure AD B2C builds the id token and sends it back to the application.</p>
+
+<h3 id="sign-in-with-social-account-flow">Sign-in with social account flow</h3>
+<p>In a more complex scenario, when a user chooses to sign-in with a Facebook account. The user is taken to the Facebook sign-in page. After the user completes their login to Facebook a token is returned to Azure AD B2C. Azure AD B2C validates the Facebook token and reads the claims. Then reads the social account profile from the directory.</p>
+
+<p>But, in this case Azure AD B2C also invokes a REST API, to further integrate with a marketing database, sending and receiving claims from the REST API.</p>
+
+<p>In the final step B2C issues an id token back to the application.</p>
+
+<p><img src="/assets/images/docs/claims_exchange_social_with_rest_api.png" alt="Claims exchange with social account and REST API" /></p>
+
+<h3 id="claims-exchange">Claims Exchange</h3>
+
+<p>Let’s take a closer look at following diagram which illustrates how Azure AD B2C exchanges claims with other systems.</p>
+
+<p>The relying party application, also known as your Application, sends an authentication request to B2C. B2C may send or receive claims from the end-user, social identity provider, multi-factor authentication provider, REST API and with the Directory service (Azure AD).</p>
+
+<p><img src="/assets/images/docs/claims_exchange_flow.png" alt="Claims Exchange flow" /></p>
+
+<p>During the policy execution, Azure AD B2C stores the claims in a temporary memory called a “claims bag”. This is stored in real-time to be utilized for any further steps in the policy.</p>
+
+<h3 id="claims-definitions">Claims Definitions</h3>
+<p>A claim provides temporary storage of data during an Azure AD B2C policy execution. It can store information about the user, such as first name, last name, or any other claim obtained from the user or other systems (claims exchanges).</p>
+
+<p>When the policy runs, Azure AD B2C sends and receives claims to and from internal and external parties and then sends a sub-set of these claims to your relying party application as part of the token. Claims are used in these ways:</p>
+<ul>
+  <li>A claim is saved, read, or updated against the directory user object.</li>
+  <li>A claim is received from an external identity provider.</li>
+  <li>Claims are sent or received using a custom REST API service.</li>
+  <li>Data is collected as claims from the user during the sign-up or edit profile flows.</li>
+</ul>
+
+<p>A claim should have at least following</p>
+
+<ul>
+  <li><strong>Id</strong> - an identifier that’s used for the claim type. Other elements can use this identifier in the policy.</li>
+  <li><strong>Display name</strong> - The title that’s displayed to users on various screens. The value can be localized.</li>
+  <li><strong>Data type</strong> - The type of the claim. Data types such as Boolean, date, date and time, int, long, string, string collection, and more.</li>
+</ul>
+
+<p>If a claim is used as part of a page a user can interact with (self-asserted claims exchange), the claim may contain more information, such as:</p>
+<ul>
+  <li><strong>User input type</strong> - The type of input control that should be available to the user when manually entering the claim data for the claim type, for example “text box”. See the user input types defined later on this page.</li>
+  <li><strong>Mask</strong> - An optional string of masking characters that can be applied when displaying the claim. For example, the phone number 324-232-4343 can be masked as XXX-XXX-4343.</li>
+  <li><strong>User help text</strong> - a description of the claim type that can be helpful for users to understand its purpose. The value can be localized.</li>
+  <li><strong>Restriction</strong> - The input validations for this claim, such as a regular expression (Regex) or a list of acceptable values. The value can be localized.</li>
+  <li><strong>Predicate validation reference</strong> - A reference to a predicate validations input element, that allows you to perform a validation process to ensure that only properly formed data is entered. For more information, see Predicates.</li>
+</ul>
+
+<h3 id="claims-mapping-and-default-value">Claims mapping and default value</h3>
+<p>When Azure AD B2C exchanges claims, the name of the claim used by the partner <em>may</em> differ from the one configured in your policy. For example, Azure AD B2C refers to the first name with <strong>givenName</strong> while Facebook uses <strong>first_name</strong>. Azure AD B2C supports mapping your partner claim name to the one configured in your Azure AD B2C policy.</p>
+
+<p>In the table below, we can see how various entities give different claim names to the same property.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>B2C internal name</th>
+      <th>Facebook</th>
+      <th>Google</th>
+      <th>Twitter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>issuerUserId</td>
+      <td>id</td>
+      <td>id</td>
+      <td>user_id</td>
+    </tr>
+    <tr>
+      <td>givenName</td>
+      <td>first_name</td>
+      <td>given_name</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>surname</td>
+      <td>last_name</td>
+      <td>family_name</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>displayName</td>
+      <td>name</td>
+      <td>name</td>
+      <td>screen_name</td>
+    </tr>
+    <tr>
+      <td>email</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can use claims mappings to change the name of the claim while sending and receiving data from any claims exchange component. This allows you to be able to interface your Azure AD B2C claim IDs with those of external systems.</p>
+
+<p>You may want to set a default value to a claim, if the partner doesn’t return the claim, or to override the value regardless of the returned value, or to handle null return values.<br />
+An example of this is setting the claim called <code class="language-plaintext highlighter-rouge">identityProvider</code> to <code class="language-plaintext highlighter-rouge">facebook.com</code> and the <code class="language-plaintext highlighter-rouge">authenticationSource</code> to <code class="language-plaintext highlighter-rouge">socialIdpAuthentication</code>. Subsequent steps in the policy can then use these claims to check whether user sign-in with a local account, or social and take a conditional based action.</p>
+
+<!--|Claim  |Facebook  |Google  |Twitter  |
+|---------|---------|---------|---------|
+|identityProvider     |facebook.com      | google.com        | twitter.com        |
+|authenticationSource     | socialIdpAuthentication        |  socialIdpAuthentication       |  socialIdpAuthentication       |-->
+
+<h3 id="claims-transformations">Claims transformations</h3>
+<p>Claims transformations are predefined functions. When exchanging claims with a partner, you may need to convert a given claim to another one or determine whether one claim is equal to another. Azure AD B2C has a predefined set of claims transforms which allows manipulating the claims inside the claims bag.</p>
+
+<p>Here are some examples of claims transformations:</p>
+<ul>
+  <li>Change a string case to upper or lower case</li>
+  <li>Set a predefined value to a claim</li>
+  <li>Compare two claims and return a boolean result</li>
+  <li>Create a random string</li>
+  <li>Format a string by the way of concatenation</li>
+  <li>Add a claim to a string collection</li>
+  <li>Get current data and time</li>
+  <li>Null a claim</li>
+  <li>Check if a claim has value and return a boolean result</li>
+</ul>
+
+<p><img src="/assets/images/docs/claims.png" alt="Claims" /></p>
+
+<h2 id="technical-profile">Technical profile</h2>
+
+<p>The following will dive into the underlying components of Azure AD B2C, these components are referred to as Technical Profiles which drive the functionality of your Azure AD B2C policy. All interactions with partners to perform claims exchanges are completed via technical profiles.</p>
+
+<p><img src="/assets/images/docs/claims_exchange_flow2.png" alt="Claims exchange flow" /></p>
+
+<p>You can think of Technical Profiles like functions. They can:</p>
+<ul>
+  <li>Send claims to the partner - “input claims”</li>
+  <li>Execute a procedure - E.g. Render a page to collect information from the user</li>
+  <li>Return claims to Azure AD B2C – “output claims”</li>
+</ul>
+
+<p>Technical profiles provide a framework with a built-in mechanism to communicate with known Azure AD B2C components, REST APIs and Identity Providers via open standard protocols. <!--: OAuth1, OAuth2, OpenID Connect, SAML and Ws-Fed. Or Communicate with B2C parties, using internal B2C protocols for: Azure Active Directory, Phone factor provider, Self-asserted, Restful provider, Session management, Token issuer and many more.--></p>
+
+<p>There are various types of technical profile:</p>
+<ul>
+  <li>Identity Provider - Denoted by the Protocol of the Identity Provider (OAuth1, OAuth2, OpenID Connect, SAML and Ws-Fed)</li>
+  <li>REST API - Allows interfacing with an external API</li>
+  <li>Self-Asserted - Allows presenting a page to the user</li>
+  <li>Azure MFA - Allows presenting the Azure MFA screen to a user.</li>
+  <li>Azure Active Directory - Allows Read/Write operations against the directory</li>
+  <li>Application Insights - Allows sending custom events to an App Insights instance.</li>
+  <li>Token Issuer - Allows issuing a token after authentication completes.</li>
+</ul>
+
+<p>All types of technical profiles share the same concept as per the following diagram. <!--Azure AD B2C reads claims from the claims bag, sends input claims, run claims transformation, and communicate with the configured party, such as an identity provider, REST API, or Azure AD directory services.  After the process finishes, the technical profile returns the output claims and may run output claims transformation. Regardless of the party the technical profile interacts with, after any claims transformation is executed, the output claims from the technical profile are immediately stored in the claims bag.--></p>
+
+<p><img src="/assets/images/docs/tp.png" alt="Technical profile execution" /></p>
+
+<!--If broken down in each one of the components, you can see there are 7 primary steps in order to create a session. This diagram shows how a technical profile is processed. Regardless of which type of technical profile selected, after any technical profile is executed, the output claims from the technical profile are immediately stored in the claims bag. Let’s quickly walk through the steps:
+-->
+<ol>
+  <li>
+    <p><strong>Input claims transformation</strong> - Before a claim is provided to this Technical Profile, the claim can be manipulated via a claims transform. For example, concatenate two claims and provide it as an input claim to this technical profile.</p>
+  </li>
+  <li>
+    <p><strong>Input claims</strong> - Claims that are provided as inputs to the type of Technical Profile being executed. Since each type of Technical Profile provides its own built in functionality, these input claims can act differently.</p>
+    <ul>
+      <li>Self Asserted - Pre-populate fields that are displayed on the screen.</li>
+      <li>REST API - Act as claims to be sent as a JSON key value pair to the API endpoint.</li>
+      <li>Identity Provider (OpenId) - Additional query parameters as part of the authentication request.</li>
+      <li>Azure MFA - Pre-populate the phone number for an prior enrolled user.</li>
+      <li>Azure Active Directory - To lookup the user in the directory.</li>
+    </ul>
+  </li>
+</ol>
+
+<!--For some of the technical profile you need to specify the set of input claims. For example, when calling a REST API, use input claims to specify the list of claims to be sent to the REST service. When collection information from the user, use input claims to pre-filled the claims on the screed (commonly used in edit profile policy). When reading, or updating a user profile, use input claim to specify the user unique id, such as user objectId, sign-in name, or user principle name.-->
+
+<ol>
+  <li><strong>Technical profile execution</strong> - As each Technical Profile has a type, the execution is dependant on that.
+    <ul>
+      <li>Self Asserted - Display a page for the user to interact with. The user can provide information, or edit information about their profile.</li>
+      <li>REST API - Ability to call a REST API endpoint to exchange claims.</li>
+      <li>Identity Provider - Ability to redirect the user to an external Identity Provider.</li>
+      <li>Azure MFA - Provides the user a page to perform Azure MFA.</li>
+      <li>Azure Active Directory - Allows Azure AD B2C policy to read or write to the directory.</li>
+    </ul>
+  </li>
+</ol>
+
+<!--The technical profile executes the procedure. For example: Take the user to a social identity provider to complete the sign-in. After successful sign-in, the user returns back to B2C and the technical profile execution continues, to the next step. A technical profile can call a REST API while sending parameters as Input claims and getting information back as output claims. Create or update the user account, or send and verifies the MFA text message.-->
+
+<ol>
+  <li>
+    <p><strong>Validation technical profile</strong> - When a user provides data via a Self-Asserted technical profile, this information may need to be validated. A common example is to have the user provide a loyalty number, which is then validated at an external system to determine if it is valid.</p>
+
+    <p>A Self-Asserted technical profile can therefore call another Technical Profile, or multiple consecutively, which provide the means to validate the information.</p>
+
+    <p>This will either allow the user to continue or prevent any further execution if an error is thrown. In the case where the user can continue, the validation technical profile can output claims and add them to the claims bag for any subsequent validation technical profiles to run as part of the this Self-Asserted technical profile.</p>
+
+    <p>Claims that a Validation technical profile shared (output) with the Self-Asserted technical profile are not automatically available for subsequent steps in the Azure AD B2C policy to use, unless those claims are output within the Self-Asserted technical profile itself.</p>
+
+    <p>In the example of validating a loyalty number, the Validation technical profile can reference a REST API technical profile to have the loyalty number validated at an external system.</p>
+  </li>
+</ol>
+
+<!--For a self-asserted technical profile, you can call an input validation technical profile. The validation technical profile validates the data provided by the user and returns an error message or not, with or without output claims. For example, when user sign-in with local account, B2C call a validation technical profile to validate the credential. Before Azure AD B2C creates a new account, it checks whether the user already exists in the directory services. 
+
+    Also you can configure input validation on the claim level, using restrictions and preconditions. A claims checks the format or data range. With validation technical profile you can  call a REST API technical profile, adding your own business logic to the policy.-->
+
+<ol>
+  <li><strong>Output claims</strong> - Claims to return back to the claims bag. Depending on the technical profile type, the output claims behave differently, however all types of Technical Profile will return the output claim into the claims bag.
+    <ul>
+      <li>Self Asserted - Will display the fields to the user, unless satisfied by a Validation technical profile.</li>
+      <li>REST API - The expected JSON key value pairs from the APIs response.</li>
+      <li>Identity Provider - The expected JSON key value pairs from the JWT received.</li>
+      <li>Azure MFA - The ability to confirm the SMS/Phone Number completed MFA.</li>
+      <li>Azure Active Directory - Issues claims after reading or writing to a user into the claims bag.</li>
+    </ul>
+
+    <p>You can use these claims as input claims into subsequent orchestration steps, create conditional logic around the journey execution, or manipulate them via output claims transformations as part of this technical profile.</p>
+  </li>
+  <li>
+    <p><strong>Output claims transformations</strong> - A technical profile may contain a list of output claims transformations to be executed to manipulate the claims before sending them to the claims bag.</p>
+
+    <p>As an example, take the first name and last name and use an output claims transformation to concatenate these values into a new single claim value. Subsequent steps will then be able to have access to the concatenated string.</p>
+  </li>
+</ol>
+
+<!--For example when sign-in with Facebook account, the technical profile who communicates with Facebook, reads the Facebook user unique identifier and run some claims transformation to create a B2C user principle name and also B2C social account unique identifier, which is a combination of the user id and Facebook provider name-->
+
+<ol>
+  <li><strong>Session management</strong> - A technical profile can contain a reference to a session management technical profile that is responsible to manage whether the user will skip a step in the policy when experiencing single sign on.</li>
+</ol>
+
+<h3 id="validation-technical-profile">Validation technical profile</h3>
+<p>As mentioned above, a Self-Asserted technical profile may define one or more validation technical profiles to be used for validating some or all of its output claims.</p>
+
+<p>A validation technical profile is an ordinary technical profile from any type(protocol), such as Azure Active Directory or a REST API. The Validation technical profile returns output claims or returns an HTTP error message. <!--The call to the REST API is done from Azure AD B2C server, and you can secure the comunication.--></p>
+
+<p>The most common use of a Validation technical profile is to validate the username and password the user provides during <strong>Sign-In</strong>.</p>
+
+<p><img src="/assets/images/docs/validation-tp.png" alt="Validation technical profile" /></p>
+
+<p>Another example during <strong>Sign-up</strong>, before allowing a user to create their account, Azure AD B2C must check if the account already exists.</p>
+
+<p>Therefore, once the user enters their information through a Self-Asserted technical profile, it must validate the email does not already exist in the directory.</p>
+
+<p>To achieve this, the Self-Asserted technical profile calls a Validation Technical profile which searches the directory for the users email. An Azure Active Directory technical profile type is used, which is configured to throw an error if the user exists, or otherwise continue silently.</p>
+
+<p>You can further augment this process to call another Validation technical profile of type REST API. This could validate any other information the user provided during sign up, for example their ID Number.</p>
+
+<!--B2C invokes a validation technical profile to check if the account already exists. If no, create the account and return the user object id. You can add additional validation technical profiles to check if a user exists in your database, or update your system when a user change the profile.-->
+
+<h3 id="integration-with-line-of-business-applications">Integration with line of business applications</h3>
+<p>You can use REST API technical profile to:</p>
+<ul>
+  <li><strong>Validate user input data</strong> - This action prevents invalid data from being persisted into Azure AD B2C claims bag. If the value from the user is not valid, your RESTful service should return an error message that instructs the user to provide a valid entry. For example, you can verify that the email address provided by the user exists in your CRM platform.</li>
+  <li><strong>Overwrite input claims</strong>  - For example, if a user enters the first name in all lowercase or all uppercase letters, you can format the name with only the first letter capitalized.</li>
+  <li><strong>Enrich user data by further integrating with corporate line-of-business services</strong> - Your RESTful service can receive the user’s email address, query the CRM platform, and return the user’s loyalty number to Azure AD B2C. The return claims can be stored in the user’s Azure AD account, evaluated in the next Orchestration Steps, included in the id token or a combination.</li>
+  <li><strong>Run custom business logic</strong> - You can send push notifications, update corporate databases, run a user migration process, manage permissions, audit databases, and perform other actions.</li>
+</ul>
+
+<p><img src="/assets/images/docs/rest-api.png" alt="REST API technical profile" /></p>
+
+<h2 id="user-journey">User Journey</h2>
+
+<p>A user journey defines the overall user experience that a Azure AD B2C policy will provide when the Identity Experience Framework processes the authentication request. The user is taken through a series of steps to retrieve the claims that are to be presented to the relying party.</p>
+
+<p>Each user journey is a consecutive sequence of <strong>orchestration steps</strong>. Each step has a defined type that specifies the overall type of step to be executed, and a reference to the technical profile which fulfills that execution.</p>
+
+<p>For example the type “IdP selection” -  This lets the user select with whom they would like to login with from a list of identity providers (sign-in with local account, Facebook, Microsoft account, Twitter, Google, ect.).</p>
+
+<p>If a user selects to sign-in with a <em>local account</em>, there is an orchestration step in which specifies the technical profile that collects and validates the user credentials and returns the user object Id to the claims bag.</p>
+
+<p>If a user selects to sign-in with a <em>social account</em>, the next orchestration step takes the user to the selected identity provider, such as Facebook.</p>
+
+<p>In the majority of cases, the last orchestration step type issues the token and redirects the user back to the application.</p>
+
+<p>In the following example, we have 7 steps. But a user may not run through all of them. Because a step may contain <strong>preconditions</strong> instructing the policy to skip to the next orchestration step, based on claim comparison or claim existence. This is very similar to an <strong>If</strong> and <strong>Else</strong> statement.</p>
+
+<p><img src="/assets/images/docs/claims_exchange_flow3.png" alt="User journey" /></p>
+
+<h3 id="local-and-social-accounts-user-journey">Local and social accounts user journey</h3>
+<p>The sign-up or sign-in user journey contains the following orchestration steps:</p>
+
+<ol>
+  <li>
+    <p>Initiates an identity provider selection: Shows the identity provider options to user. If user provides credentials on this screen, then they have chosen to login with a local account. If the user clicks on one of the social identity providers, B2C will move directly to the next step to handle this.</p>
+
+    <p>![Sign-up or sign-in]/assets/images/docs/uj-local-and-social-account-susi.png)</p>
+  </li>
+  <li>
+    <p>If user had signed-in locally (in the previous orchestration step/s), skip this step, since in this step we want to handle external account logins. In this step sign in with the social provider selected earlier by executing its respective technical profile, or register new user with a local account.</p>
+
+    <p><img src="/assets/images/docs/uj-local-and-social-account-susi-second.png" alt="Sign-up or sign-in with social account" /></p>
+  </li>
+  <li>
+    <p>If local account had been chosen earlier (user had signed-in or signed-up with a local account), skip this step, otherwise lookup the social account by the social account unique id obtained from the social identity provider and read its attributes from the Azure AD B2C directory.</p>
+
+    <p>In this step, B2C attempts to find a representation of the social account in the directory. If the account is not found, B2C will not raise an error message, since this means the user has signed-in with Facebook for the first time.</p>
+  </li>
+  <li>
+    <p>If a social account representation of a user was found skip this step. Otherwise since this user logging in for the first time with their social account, present the user a registration form. Once the user submits this page create the account in the directory. The Self-Asserted technical profile invokes a validation technical profile that actually writes the account into the directory.</p>
+
+    <p><img src="/assets/images/docs/uj-social-account-sign-up.png" alt="Social account sign-up" /></p>
+  </li>
+  <li>
+    <p>If this is a social account login, skip this step, else read all desired attributes from the user signed in with a local account from the user directory.</p>
+  </li>
+  <li>
+    <p>Create a token with the claims of the user collected during the user journey to send back to app within the id token.</p>
+  </li>
+</ol>
+
+<h3 id="preconditions">Preconditions</h3>
+<p>Preconditions can be used similar to an if/else statement. They can be used to conditionally execute an orchestration step (technical profile), or validation technical profile.</p>
+
+<p>The following is an example which applies a precondition to an orchestration step within the user journey.
+This orchestration step will execute a technical profile, therefore the precondition governs whether the technical profile will or will not be run.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;OrchestrationStep</span> <span class="na">Order=</span><span class="s">"5"</span> <span class="na">Type=</span><span class="s">"ClaimsExchange"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Preconditions&gt;</span>
+        <span class="nt">&lt;Precondition</span> <span class="na">Type=</span><span class="s">"ClaimsExist"</span> <span class="na">ExecuteActionsIf=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Value&gt;</span>objectId<span class="nt">&lt;/Value&gt;</span>
+            <span class="nt">&lt;Action&gt;</span>SkipThisOrchestrationStep<span class="nt">&lt;/Action&gt;</span>
+        <span class="nt">&lt;/Precondition&gt;</span>
+    <span class="nt">&lt;/Preconditions&gt;</span>
+    <span class="nt">&lt;ClaimsExchanges&gt;</span>
+        <span class="nt">&lt;ClaimsExchange</span> <span class="na">Id=</span><span class="s">"AADUserWrite"</span> <span class="na">TechnicalProfileReferenceId=</span><span class="s">"AAD-UserWriteUsingAlternativeSecurityId"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/ClaimsExchanges&gt;</span>
+</code></pre></div></div>
+
+<p>Breaking this down:</p>
+<ol>
+  <li>This states that this precondition will execute the desired action if the claim exists in the Azure AD B2C claim bag.</li>
+</ol>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Precondition</span> <span class="na">Type=</span><span class="s">"ClaimsExist"</span> <span class="na">ExecuteActionsIf=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>This states that the claim which is being evaluated to being within the claim bag is called <code class="language-plaintext highlighter-rouge">objectId</code>.</li>
+</ol>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Value&gt;</span>objectId<span class="nt">&lt;/Value&gt;</span>
+</code></pre></div></div>
+
+<ol>
+  <li>This is the action which will be executed once the condition is met.</li>
+</ol>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Action&gt;</span>SkipThisOrchestrationStep<span class="nt">&lt;/Action&gt;</span>
+</code></pre></div></div>
+
+<p>If the condition is not met, then the orchestration step is not skipped, and the technical profile is executed.</p>
+
+<p>A precondition can also base its result on the value of a claim.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;Precondition</span> <span class="na">Type=</span><span class="s">"ClaimEquals"</span> <span class="na">ExecuteActionsIf=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Value&gt;</span>name<span class="nt">&lt;/Value&gt;</span>
+        <span class="nt">&lt;Value&gt;</span>John Smith<span class="nt">&lt;/Value&gt;</span>
+        <span class="nt">&lt;Action&gt;</span>SkipThisOrchestrationStep<span class="nt">&lt;/Action&gt;</span>
+    <span class="nt">&lt;/Precondition&gt;</span>
+</code></pre></div></div>
+
+<p>For preconditions based <strong>Boolean</strong> claims, the <code class="language-plaintext highlighter-rouge">Value</code> must be <code class="language-plaintext highlighter-rouge">True</code> or <code class="language-plaintext highlighter-rouge">False</code>, this is case sensitive.</p>
+
+<p>For more information on configuring a precondition, see this <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/userjourneys#preconditions">reference</a> for preconditions to control the execution of orchestration steps, and this <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/validation-technical-profile#validationtechnicalprofiles">reference</a> to control the execution of validation technical profiles.</p>
+
+<h2 id="policy-structure">Policy structure</h2>
+
+<p>Custom policies are XML configuration files that define the behavior and user experience of an Azure AD B2C policy, with the use of:</p>
+<ul>
+  <li>Claim definitions</li>
+  <li>Claims transformations</li>
+  <li>Technical profiles</li>
+  <li>User journey/s</li>
+  <li>Replying Party</li>
+</ul>
+
+<p>While built-in policies (also referred to as User Flows) are predefined in the Azure AD B2C portal for the most common authentication journeys, custom policies can be fully edited by an identity developer to complete many different tasks wrapped in an authentication journey.</p>
+
+<h3 id="policy-execution">Policy execution</h3>
+<p>Your <strong>relying party application</strong> calls a <strong>relying party policy</strong>. The relying party policy specifies which <strong>user journey</strong> to execute.</p>
+
+<p>A user journey defines the business logic of what a user will experience. Each user journey is a set of orchestration steps that performs a series of claims exchanges with various partners, in a consecutive order adding to the claims bag as each step completes.</p>
+
+<p>Each <strong>orchestration step</strong> calls a Technical Profile. Technical profiles provide a framework with a built-in mechanism to communicate with known Azure AD B2C components, REST APIs and Identity Providers via open standard protocols.</p>
+
+<p>An orchestration step may have one or more <strong>preconditions</strong> to determine if the orchestration step should execute during this flow or skipped.</p>
+
+<p><img src="/assets/images/docs/policy-execution.png" alt="Policy execution" /></p>
+
+<h3 id="policy-file-structure">Policy file structure</h3>
+
+<p>An Azure AD B2C policy follows an inheritance model, whereby configurations being made in a chained file can take dependencies on configuration elements defined earlier in the chain of files. This allows you to scale your design without impacting other work that you have created and add additional policies to leverage existing work.</p>
+
+<p>Let’s look at a relying party application (at the bottom of the diagram). It calls the Relying Party policy file to execute a specific task to initiate the sign-in flow.</p>
+
+<p>The Identity Experience Framework in Azure AD B2C stacks all of the elements from the Base file, completing the chain of files to the Relying Party policy file to assemble the current policy in effect. Elements of the same type and name in further in the chain of files override those elements those already configured in file earlier in the chain.</p>
+
+<p>As described in the diagram, your application will always reference the relying party policy id as part of the authentication request.</p>
+
+<p>The child policy at any level can inherit from the parent policy and extend it by adding new elements or overriding some or all of the elements in the parent policies.</p>
+
+<p>There is no limit on the number of levels in this chained structure.</p>
+
+<p><img src="/assets/images/docs/policy-inheritance.png" alt="Policy inheritance" /></p>
+
+<ul>
+  <li>A relying party application, such as a web, mobile, or desktop application, calls the relying party (RP) policy.</li>
+  <li>The RP policy configures the list of claims the relying party application receives as part of the token that is issued.</li>
+  <li>Multiple applications can use the same policy. All applications will receive the same token and claims in this case.</li>
+  <li>A single application can use multiple policies and each application could receive different claims in the returned token.</li>
+  <li>A relying party policy, points to the user journey to be executed</li>
+  <li>A tenant can have multiple polices (built-in and custom). You can combine a built-in policy with custom policies. For example the sign-in journey can be a custom policy, whilst the profile edit journey can be a built-in policy.</li>
+</ul>
+
+<h3 id="relying-party-policy-endpoints">Relying party policy endpoints</h3>
+<p>For each relying party policy created, Azure AD B2C provides you  the endpoints that your application may use:</p>
+<ul>
+  <li><strong>Well-known configuration</strong> – which provide the metadata for Azure AD B2C.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">https://tenant-name.b2clogin.com/tenant-name.onmicrosoft.com/policy-id/oauth2/v2.0/.well-known/openid-configuration</code></li>
+    </ul>
+  </li>
+  <li><strong>Authorize</strong> endpoint to make authentication requests
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">https://tenant-name.b2clogin.com/tenant-name.onmicrosoft.com/policy-id/oauth2/v2.0/authorize</code></li>
+    </ul>
+  </li>
+  <li><strong>Token</strong> endpoint to redeem authorization codes for access tokens
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">https://tenant-name.b2clogin.com/tenant-name.onmicrosoft.com/policy-id/oauth2/v2.0/token</code></li>
+    </ul>
+  </li>
+  <li><strong>Logout</strong> to logout the user from Azure AD B2C.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">https://tenant-name.b2clogin.com/tenant-name.onmicrosoft.com/policy-id/oauth2/v2.0/logout</code></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- ![OAuth2 endpoints](/assets/images/docs/endpoints.png) -->
+
+<h2 id="customize-your-policy">Customize your policy</h2>
+
+<h3 id="content-definitions">Content definitions</h3>
+<p>A content definition allows linking a page type referenced in a Self-Asserted technical profile and the HTML template, localization and page contract (see later).</p>
+
+<p><img src="/assets/images/docs/content-definition.png" alt="Content definitions" /></p>
+
+<p>The self-asserted technical profile points to a content definition identifier. The content definition contains:</p>
+<ul>
+  <li>The URL of the HTML template</li>
+  <li>Pointer to the localizations</li>
+  <li>Defines the <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/page-layout">page contract</a></li>
+</ul>
+
+<p>Note: You can add the localization to the content definition OR directly to the self-asserted technical profile</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-04-06">April 6, 2020</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/docs/Customization/" class="pagination--pager" title="UI customization
+">Previous</a>
+    
+    
+      <a href="/docs/xml-elements/" class="pagination--pager" title="XML elements
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <div align="center" style="margin: 1em 0;">
+        <ins class="adsbygoogle"
+             style="display:block; border-bottom: initial;"
+             data-ad-client="ca-pub-7328585512091257"
+             data-ad-slot="3049671934"
+             data-ad-format="auto"></ins>
+        </div>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://stackoverflow.com/questions/tagged/azure-ad-b2c" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stackoverflow</a></li>
+        
+      
+        
+          <li><a href="https://github.com/azure-ad-b2c" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://woodgrovegroceriesb2cdemo.azurewebsites.net/" rel="nofollow noopener noreferrer"><i class="fas fa-laptop" aria-hidden="true"></i> Demo Site</a></li>
+        
+      
+        
+          <li><a href="https://azure.microsoft.com/en-us/services/active-directory-b2c/" rel="nofollow noopener noreferrer"><i class="fab fa-microsoft" aria-hidden="true"></i> Offical docs</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/results?search_query=azure+ad+b2c" rel="nofollow noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Michael Rose. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'QB6HVGBSBA',
+  apiKey: '9d5014e5bbc77372547bce778dfa5663',
+  indexName: 'minimal_mistakes',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+// Starting the search
+search.start();
+</script>
+
+
+
+
+
+    
+
+  
+
+
+
+
+
+  </body>
+</html>

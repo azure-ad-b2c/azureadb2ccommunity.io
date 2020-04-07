@@ -1,0 +1,464 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Azure AD B2C</title>
+<meta name="description" content="Want to become a pro in B2C? We are here to help ">
+
+
+  <meta name="author" content="Azure AD B2C">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Azure AD B2C">
+<meta property="og:title" content="Azure AD B2C">
+<meta property="og:url" content="http://localhost:4000/previous_wiki_backup/Identity-and-claims-exchange/">
+
+
+  <meta property="og:description" content="Want to become a pro in B2C? We are here to help ">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.png">
+
+
+
+  <meta name="twitter:site" content="@mmistakes">
+  <meta name="twitter:title" content="Azure AD B2C">
+  <meta name="twitter:description" content="Want to become a pro in B2C? We are here to help ">
+  <meta name="twitter:url" content="http://localhost:4000/previous_wiki_backup/Identity-and-claims-exchange/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/assets/images/site-logo.png">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/previous_wiki_backup/Identity-and-claims-exchange/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Michael Rose",
+      "url": "http://localhost:4000/",
+      "sameAs": ["https://twitter.com/mmistakes","https://www.facebook.com/michaelrose"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y" />
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Azure AD B2C Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--default">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/b2c-logo.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          Azure AD B2C
+          <span class="site-subtitle">Community</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/what-is-azuread-b2c/">Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+<p>Azure AD B2C is backed by a global, highly available, and secure <strong>cloud identity service</strong> and <strong>directory service</strong>. During policy execution, such as sign-up or sign-in, Azure AD B2C policy exchanges claims with a variety of systems, both having the ability to send and receive claims in either direction.</p>
+
+<h2 id="sign-in-with-local-account-flow">Sign-in with local account flow</h2>
+<p>This diagram depicts the Sign-in with local account flow using a “sign-up or sign-in” policy.</p>
+
+<p><img src="/previous_wiki_backup/media/claims_exchange_local_account.png" alt="Claims exchange with local account" /></p>
+
+<ol>
+  <li>
+    <p>The user starts their journey by opening their application and clicking on sign-in button. The user is redirected to Azure AD B2C to complete the sign-up or sign-in flow.</p>
+  </li>
+  <li>
+    <p>In this example, the user chooses to sign-in with a local account (an account that is fully managed by Azure AD B2C). 
+The user provides their email and password. Internally, the email address is cross referenced against the signInNames user attribute.</p>
+  </li>
+  <li>
+    <p>The user clicks “Sign In”. Azure AD B2C validates the credentials provided by the user. If the user provided the correct credentials, Azure AD B2C reads various user object properties from the directory, such as display name, first name, last name and more.</p>
+  </li>
+  <li>
+    <p>Azure AD B2C finally redirects the user back to the application with a token that was issued.</p>
+  </li>
+</ol>
+
+<p>At a high level, this outlines the flow of a local account sign-in journey. In these steps, Azure AD B2C exchanges claims with other systems.</p>
+
+<p><strong>First step</strong>, the application sends information to execute the authorization request, such as the Azure AD B2C policy Id.</p>
+
+<p><strong>Second step</strong>, the user provided their credentials, this translates to the “username” and “password” claims being provided by the user. This is a claims exchange, and this claims exchange is called “self-asserted”.</p>
+
+<p><strong>Third step</strong>, Azure AD B2C reads the user object from the directory. Sending the username claim and getting back the requested claims about the user.</p>
+
+<p><strong>Fourth step</strong>, Azure AD B2C builds the id token and sends it back to the application.</p>
+
+<h2 id="sign-in-with-social-account-flow">Sign-in with social account flow</h2>
+<p>In a more complex scenario, when a user chooses to sign-in with a Facebook account. The user is taken to the Facebook sign-in page. After the user completes their login to Facebook a token is returned to Azure AD B2C. Azure AD B2C validates the Facebook token and reads the claims. Then reads the social account profile from the directory.</p>
+
+<p>But, in this case Azure AD B2C also invokes a REST API, to further integrate with a marketing database, sending and receiving claims from the REST API.</p>
+
+<p>In the final step B2C issues an id token back to the application.</p>
+
+<p><img src="/previous_wiki_backup/media/claims_exchange_social_with_rest_api.png" alt="Claims exchange with social account and REST API" /></p>
+
+<h2 id="claims-exchange">Claims Exchange</h2>
+
+<p>Let’s take a closer look at following diagram which illustrates how Azure AD B2C exchanges claims with other systems.</p>
+
+<p>The relying party application, also known as your Application, sends an authentication request to B2C. B2C may send or receive claims from the end-user, social identity provider, multi-factor authentication provider, REST API and with the Directory service (Azure AD).</p>
+
+<p><img src="/previous_wiki_backup/media/claims_exchange_flow.png" alt="Claims Exchange flow" /></p>
+
+<p>During the policy execution, Azure AD B2C stores the claims in a temporary memory called a “claims bag”. This is stored in real-time to be utilized for any further steps in the policy.</p>
+
+<h2 id="claims-definitions">Claims Definitions</h2>
+<p>A claim provides temporary storage of data during an Azure AD B2C policy execution. It can store information about the user, such as first name, last name, or any other claim obtained from the user or other systems (claims exchanges).</p>
+
+<p>When the policy runs, Azure AD B2C sends and receives claims to and from internal and external parties and then sends a sub-set of these claims to your relying party application as part of the token. Claims are used in these ways:</p>
+<ul>
+  <li>A claim is saved, read, or updated against the directory user object.</li>
+  <li>A claim is received from an external identity provider.</li>
+  <li>Claims are sent or received using a custom REST API service.</li>
+  <li>Data is collected as claims from the user during the sign-up or edit profile flows.</li>
+</ul>
+
+<p>A claim should have at least following</p>
+
+<ul>
+  <li><strong>Id</strong> - an identifier that’s used for the claim type. Other elements can use this identifier in the policy.</li>
+  <li><strong>Display name</strong> - The title that’s displayed to users on various screens. The value can be localized.</li>
+  <li><strong>Data type</strong> - The type of the claim. Data types such as Boolean, date, date and time, int, long, string, string collection, and more.</li>
+</ul>
+
+<p>If a claim is used as part of a page a user can interact with (self-asserted claims exchange), the claim may contain more information, such as:</p>
+<ul>
+  <li><strong>User input type</strong> - The type of input control that should be available to the user when manually entering the claim data for the claim type, for example “text box”. See the user input types defined later on this page.</li>
+  <li><strong>Mask</strong> - An optional string of masking characters that can be applied when displaying the claim. For example, the phone number 324-232-4343 can be masked as XXX-XXX-4343.</li>
+  <li><strong>User help text</strong> - a description of the claim type that can be helpful for users to understand its purpose. The value can be localized.</li>
+  <li><strong>Restriction</strong> - The input validations for this claim, such as a regular expression (Regex) or a list of acceptable values. The value can be localized.</li>
+  <li><strong>Predicate validation reference</strong> - A reference to a predicate validations input element, that allows you to perform a validation process to ensure that only properly formed data is entered. For more information, see Predicates.</li>
+</ul>
+
+<h2 id="claims-mapping-and-default-value">Claims mapping and default value</h2>
+<p>When Azure AD B2C exchanges claims, the name of the claim used by the partner <em>may</em> differ from the one configured in your policy. For example, Azure AD B2C refers to the first name with <strong>givenName</strong> while Facebook uses <strong>first_name</strong>. Azure AD B2C supports mapping your partner claim name to the one configured in your Azure AD B2C policy.</p>
+
+<p>In the table below, we can see how various entities give different claim names to the same property.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>B2C internal name</th>
+      <th>Facebook</th>
+      <th>Google</th>
+      <th>Twitter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>issuerUserId</td>
+      <td>id</td>
+      <td>id</td>
+      <td>user_id</td>
+    </tr>
+    <tr>
+      <td>givenName</td>
+      <td>first_name</td>
+      <td>given_name</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>surname</td>
+      <td>last_name</td>
+      <td>family_name</td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>displayName</td>
+      <td>name</td>
+      <td>name</td>
+      <td>screen_name</td>
+    </tr>
+    <tr>
+      <td>email</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can use claims mappings to change the name of the claim while sending and receiving data from any claims exchange component. This allows you to be able to interface your Azure AD B2C claim IDs with those of external systems.</p>
+
+<p>You may want to set a default value to a claim, if the partner doesn’t return the claim, or to override the value regardless of the returned value, or to handle null return values.<br />
+An example of this is setting the claim called <code class="language-plaintext highlighter-rouge">identityProvider</code> to <code class="language-plaintext highlighter-rouge">facebook.com</code> and the <code class="language-plaintext highlighter-rouge">authenticationSource</code> to <code class="language-plaintext highlighter-rouge">socialIdpAuthentication</code>. Subsequent steps in the policy can then use these claims to check whether user sign-in with a local account, or social and take a conditional based action.</p>
+
+<!--|Claim  |Facebook  |Google  |Twitter  |
+|---------|---------|---------|---------|
+|identityProvider     |facebook.com      | google.com        | twitter.com        |
+|authenticationSource     | socialIdpAuthentication        |  socialIdpAuthentication       |  socialIdpAuthentication       |-->
+
+<h2 id="claims-transformations">Claims transformations</h2>
+<p>Claims transformations are predefined functions. When exchanging claims with a partner, you may need to convert a given claim to another one or determine whether one claim is equal to another. Azure AD B2C has a predefined set of claims transforms which allows manipulating the claims inside the claims bag.</p>
+
+<p>Here are some examples of claims transformations:</p>
+<ul>
+  <li>Change a string case to upper or lower case</li>
+  <li>Set a predefined value to a claim</li>
+  <li>Compare two claims and return a boolean result</li>
+  <li>Create a random string</li>
+  <li>Format a string by the way of concatenation</li>
+  <li>Add a claim to a string collection</li>
+  <li>Get current data and time</li>
+  <li>Null a claim</li>
+  <li>Check if a claim has value and return a boolean result</li>
+</ul>
+
+<p><img src="/previous_wiki_backup/media/claims.png" alt="Claims" /></p>
+
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <div align="center" style="margin: 1em 0;">
+        <ins class="adsbygoogle"
+             style="display:block; border-bottom: initial;"
+             data-ad-client="ca-pub-7328585512091257"
+             data-ad-slot="3049671934"
+             data-ad-format="auto"></ins>
+        </div>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://stackoverflow.com/questions/tagged/azure-ad-b2c" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stackoverflow</a></li>
+        
+      
+        
+          <li><a href="https://github.com/azure-ad-b2c" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://woodgrovegroceriesb2cdemo.azurewebsites.net/" rel="nofollow noopener noreferrer"><i class="fas fa-laptop" aria-hidden="true"></i> Demo Site</a></li>
+        
+      
+        
+          <li><a href="https://azure.microsoft.com/en-us/services/active-directory-b2c/" rel="nofollow noopener noreferrer"><i class="fab fa-microsoft" aria-hidden="true"></i> Offical docs</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/results?search_query=azure+ad+b2c" rel="nofollow noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Michael Rose. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'QB6HVGBSBA',
+  apiKey: '9d5014e5bbc77372547bce778dfa5663',
+  indexName: 'minimal_mistakes',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+// Starting the search
+search.start();
+</script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

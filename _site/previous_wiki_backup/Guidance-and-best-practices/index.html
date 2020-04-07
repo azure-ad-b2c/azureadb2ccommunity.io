@@ -1,0 +1,390 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Best practices - Azure AD B2C</title>
+<meta name="description" content="Want to become a pro in B2C? We are here to help ">
+
+
+  <meta name="author" content="Azure AD B2C">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Azure AD B2C">
+<meta property="og:title" content="Best practices">
+<meta property="og:url" content="http://localhost:4000/previous_wiki_backup/Guidance-and-best-practices/">
+
+
+  <meta property="og:description" content="Want to become a pro in B2C? We are here to help ">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.png">
+
+
+
+  <meta name="twitter:site" content="@mmistakes">
+  <meta name="twitter:title" content="Best practices">
+  <meta name="twitter:description" content="Want to become a pro in B2C? We are here to help ">
+  <meta name="twitter:url" content="http://localhost:4000/previous_wiki_backup/Guidance-and-best-practices/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/assets/images/site-logo.png">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/previous_wiki_backup/Guidance-and-best-practices/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Michael Rose",
+      "url": "http://localhost:4000/",
+      "sameAs": ["https://twitter.com/mmistakes","https://www.facebook.com/michaelrose"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y" />
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Azure AD B2C Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--default">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/b2c-logo.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          Azure AD B2C
+          <span class="site-subtitle">Community</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/docs/what-is-azuread-b2c/">Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <h2 id="best-practices">Best practices</h2>
+<p>Within an Azure AD B2C custom policy, you can integrate your own business logic to build the user experiences your require and extend functionality of the service. We have a set of best practices and recommendations to get started.</p>
+
+<ol>
+  <li>Within the base policy, we suggest avoiding making any changes.  And if required, make heavy notes. Instead, create your logic within the extension files. You can add new elements which will override the base policy by referencing the same Id. This will allow you to scale out your project while making it easier to upgrade base policy later on if Microsoft releases new starter packs.</li>
+  <li>Configure your user journey in the extension file only.</li>
+  <li>New elements should be added to the extension file. You can still override the technical profile configured in the base policy, in the extension file with new elements by referencing the original technical profile Id.</li>
+</ol>
+
+<h2 id="customize-elements-defined-in-the-base-policy">Customize elements defined in the base policy</h2>
+<ul>
+  <li>To customize any element from the base policy, you simply copy the element with its parent elements, and make the necessary changes.</li>
+  <li>Want to add something new? That’s OK! Make sure you copy over all of those claims from the base policy. <!-- what does this mean?--></li>
+  <li>When overriding a Self-Asserted technical profile by adding new Output Claims, the new claim will be rendered first. To change the order, make sure you include all of the claims from the base policy and arrange the output claims in the order you require them to be rendered.</li>
+</ul>
+
+<p>In the following example, the Facebook policy is configured in the base policy, while in the extension policy you must specify the Facebook application Id, the scopes to use and the information you want to retrieve from Facebook. The extension contains the values that are related to your environment like the scopes that are relevant to you in the interaction with Facebook.</p>
+
+<p><img src="/previous_wiki_backup/media/facebook-extension.png" alt="Facebook customization" /></p>
+
+<h2 id="including-technical-profile">Including technical profile</h2>
+<p>You can create a technical profile that is based on another one. Use the IncludeTechnicalProfile element to customize your technical profile.</p>
+
+<p>For example <code class="language-plaintext highlighter-rouge">AAD-UserReadUsingAlternativeSecurityId-NoError</code> includes <code class="language-plaintext highlighter-rouge">AAD-UserReadUsingAlternativeSecurityId</code>, while configuring the <code class="language-plaintext highlighter-rouge">RaiseErrorIfClaimsPrincipalDoesNotExist</code> metadata item to <code class="language-plaintext highlighter-rouge">false</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">AAD-UserReadUsingAlternativeSecurityId</code> itself includes the <code class="language-plaintext highlighter-rouge">AAD-Common</code> technical profile.</p>
+
+<p><code class="language-plaintext highlighter-rouge">AAD-Common</code> provides the base functionality to communicate with Azure AD over the AzureActiveDirectoryProvider propriety protocol.</p>
+
+<!--So, instead of creating new technical profile with all the XML elements. You can create a new one based on another one.-->
+
+<p><img src="/previous_wiki_backup/media/include-tp.png" alt="Include a technical profile" /></p>
+
+<!--So may ask: What is the benefits of creating a technical profile to include versus just overwriting it?-->
+
+<ul>
+  <li>
+    <p><strong>Include</strong>: When you include a technical profile, you create a new technical profile, that is based on another one. The one you create has a new name (id). You can declare a technical profile that includes any technical profile, in the same policy or in any policy that inherits from the policy  where the technical profile is configured.</p>
+
+    <p>For example, a technical profile “A” can be included in technical profile “B1” and “B2”. B1 itself can be included in technical profile “C” and so on.</p>
+  </li>
+  <li>
+    <p><strong>Overwrite</strong>. Overwrite is always done in a policy that inherits from the policy where the technical profile is declared. When you overwrite, you do not change the technical profile name. You can overwrite a technical profile that is configured in any policy which is inherited by your current working policy file.</p>
+  </li>
+</ul>
+
+<p><img src="/previous_wiki_backup/media/include-tp-2.png" alt="Include a technical profile versus overwriting" /></p>
+
+<h2 id="escape-xml-invalid-characters">Escape XML invalid characters</h2>
+
+<p>If you need to include XML invalid characters in the XML policy file, use their escaped equivalents. The following table shows the invalid XML characters and their escaped equivalents.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Invalid XML character</th>
+      <th>Replaced with</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;lt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;gt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">"</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;quot;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">'</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;apos;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&amp;amp;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <div align="center" style="margin: 1em 0;">
+        <ins class="adsbygoogle"
+             style="display:block; border-bottom: initial;"
+             data-ad-client="ca-pub-7328585512091257"
+             data-ad-slot="3049671934"
+             data-ad-format="auto"></ins>
+        </div>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://stackoverflow.com/questions/tagged/azure-ad-b2c" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stackoverflow</a></li>
+        
+      
+        
+          <li><a href="https://github.com/azure-ad-b2c" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://woodgrovegroceriesb2cdemo.azurewebsites.net/" rel="nofollow noopener noreferrer"><i class="fas fa-laptop" aria-hidden="true"></i> Demo Site</a></li>
+        
+      
+        
+          <li><a href="https://azure.microsoft.com/en-us/services/active-directory-b2c/" rel="nofollow noopener noreferrer"><i class="fab fa-microsoft" aria-hidden="true"></i> Offical docs</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/results?search_query=azure+ad+b2c" rel="nofollow noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Michael Rose. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'QB6HVGBSBA',
+  apiKey: '9d5014e5bbc77372547bce778dfa5663',
+  indexName: 'minimal_mistakes',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+// Starting the search
+search.start();
+</script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

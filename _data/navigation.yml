@@ -1,0 +1,56 @@
+# example navigation
+foo:
+  - title: "Parent Link 1"
+    url: /parent-1-page-url/
+    children:
+      - title: "Child Link 1"
+        url: /child-1-page-url/
+      - title: "Child Link 2"
+        url: /child-2-page-url/
+  - title: "Parent Link 2"
+    url: /parent-2-page-url/
+    children:
+      - title: "Child Link 1"
+        url: /child-1-page-url/
+      - title: "Child Link 2"
+        url: /child-2-page-url/
+      - title: "Child Link 3"
+        url: /child-3-page-url/
+
+
+# main links
+main:
+  - title: "Quick-Start Guide"
+    url: /docs/what-is-azuread-b2c/
+  - title: "About"
+    url: /about/
+
+
+# documentation links
+docs:
+  - title: Basics
+    children:
+      - title: "What is Azure AD B2C?"
+        url: /docs/what-is-azuread-b2c/
+      - title: "Identity fundamentals"
+        url: /docs/identity-fundamentals/
+      - title: "Policies"
+        url: /docs/azuread-b2c-policies/
+      - title: "App Integration"
+        url: /docs/app-integration/
+      
+  - title: Customization
+    children:
+      - title: "UI customization"
+        url: docs/Customization/
+
+  - title: Custom policies
+    children:
+      - title: "Concepts"
+        url: /docs/custom-policy-concepts/
+      - title: "XML elements"
+        url: /docs/xml-elements/
+      - title: "Code walkthrough"
+        url: /docs/custom-policy-code-walkthrough/
+      - title: "Best practices"
+        url: /docs/custom-policy-best-practices/
