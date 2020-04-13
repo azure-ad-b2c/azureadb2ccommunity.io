@@ -12,7 +12,7 @@ comment: true
 
 ## Identity protocols and Azure AD B2C custom policy deep-dive series
 
-Given the COVID-19 situation, we understand how rapidly your digital space is evolving and to help with that, Microsoft invites you to join our Azure Active Directory B2C team and B2C Community Partners for a virtual B2C custom policy training series.
+Given the COVID-19 situation, we understand how rapidly your digital space is evolving. To with that, Azure Active Directory B2C team and B2C Community Partners invite you to a virtual B2C custom policy training series.
 
 At the end of the training you should have a deeper understanding of custom policies and all the resources will be shared here.
 
