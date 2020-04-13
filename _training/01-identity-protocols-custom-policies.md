@@ -33,6 +33,8 @@ Date  |Time (PDT)   |Topic   |  Links
 18th May 2020  |  2-3 PM | Custom policies part 3: Troubleshooting  |  Click [here](https://aka.ms/B2CWebinar-Week5-TimeZone1) to join
 19th May 2020  | 8-9 AM  |  Custom policies part 3: Troubleshooting |  Click [here](https://aka.ms/B2CWebinar-Week5-TimeZone2) to join
 
+Note: Times are in Pacific Time (UTC-7)  and the links become functional during the session.
+
 ## Pre-requisites
 
 ### Series
