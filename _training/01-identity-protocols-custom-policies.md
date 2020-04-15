@@ -20,18 +20,18 @@ Please RSVP [here](http://aka.ms/B2Cprecallsurvey)
 
 ## Calendar of upcoming Series
 
-Date  |Time (PDT)   |Topic   |  Links
+Date  |Time (PDT)   |Topic   |  Link to join | Add to Calendar
 --|---|---|--
-20th April 2020  |  2-3 PM | Identity Protocols – OIDC, OAuth2  |  Click [here](https://aka.ms/B2CWebinar-Week1-TimeZone1) to join
-  21st April 2020 |  8-9 AM |  Identity Protocols – OIDC, OAuth2 |  Click [here](https://aka.ms/B2CWebinar-Week1-TimeZone2) to join
-27th April 2020  |  2-3 PM |  B2C & App Integration (with MSAL) |  Click [here](https://aka.ms/B2CWebinar-Week2-TimeZone1) to join
-28th April 2020 |  8-9 AM |  B2C & App Integration (with MSAL) |  Click [here](https://aka.ms/B2CWebinar-Week2-TimeZone2) to join
-4th May 2020  |  2-3 PM |  Custom policies part 1: Concepts with take-home lab |  Click [here](https://aka.ms/B2CWebinar-Week3-TimeZone1) to join
-5th May 2020  |  8-9 AM |  Custom policies part 1: Concepts with take-home lab |  Click [here](https://aka.ms/B2CWebinar-Week3-TimeZone2) to join
-11th May 2020  | 2-3 PM  | Custom policies part 2: Policy walkthrough    |  Click [here](https://aka.ms/B2CWebinar-Week4-TimeZone1) to join
-12th May 2020  |  8-9 AM |  Custom policies part 2: Policy walkthrough   |  Click [here](https://aka.ms/B2CWebinar-Week4-TimeZone2) to join
-18th May 2020  |  2-3 PM | Custom policies part 3: Troubleshooting  |  Click [here](https://aka.ms/B2CWebinar-Week5-TimeZone1) to join
-19th May 2020  | 8-9 AM  |  Custom policies part 3: Troubleshooting |  Click [here](https://aka.ms/B2CWebinar-Week5-TimeZone2) to join
+20th April 2020  |  2-3 PM | Identity Protocols – OIDC, OAuth2  |  Click [here](https://aka.ms/B2CWebinar-Week1-TimeZone1) to join |[ Add to Calendar](https://awesomemining.blob.core.windows.net/azureadb2cseries/Identity%20Protocols%20%20OIDC%20OAuth2%20-%2020th%20April%202020%20-%202pm%20PDT.ics)
+  21st April 2020 |  8-9 AM |  Identity Protocols – OIDC, OAuth2 |  Click [here](https://aka.ms/B2CWebinar-Week1-TimeZone2) to join | [Add to Calendar](https://awesomemining.blob.core.windows.net/azureadb2cseries/Identity%20Protocols%20%20OIDC%20OAuth2%20-%2021st%20April%202020%20-%208am%20PDT.ics)
+27th April 2020  |  2-3 PM |  B2C & App Integration (with MSAL) |  Click [here](https://aka.ms/B2CWebinar-Week2-TimeZone1) to join | [Add to Calendar](https://awesomemining.blob.core.windows.net/azureadb2cseries/B2C%20%20App%20Integration%20with%20MSAL%20-%2027th%20April%202020%20-%202pm%20PDT.ics)
+28th April 2020 |  8-9 AM |  B2C & App Integration (with MSAL) |  Click [here](https://aka.ms/B2CWebinar-Week2-TimeZone2) to join | [Add to Calendar](https://awesomemining.blob.core.windows.net/azureadb2cseries/B2C%20%20App%20Integration%20with%20MSAL%20-%2028th%20April%202020%20-%208am%20PDT.ics)
+4th May 2020  |  2-3 PM |  Custom policies part 1: Concepts with take-home lab |  Click [here](https://aka.ms/B2CWebinar-Week3-TimeZone1) to join | [Add to Calendar](https://awesomemining.blob.core.windows.net/azureadb2cseries/Custom%20policies%20part%201%20Concepts%20with%20take-home%20lab%20-%204th%20May%202020%20-%202pm%20PDT.ics)
+5th May 2020  |  8-9 AM |  Custom policies part 1: Concepts with take-home lab |  Click [here](https://aka.ms/B2CWebinar-Week3-TimeZone2) to join | [Add to Calendar](https://awesomemining.blob.core.windows.net/azureadb2cseries/Custom%20policies%20part%201%20Concepts%20with%20take-home%20lab%20-%205th%20May%202020%20-%208am%20PDT.ics)
+11th May 2020  | 2-3 PM  | Custom policies part 2: Policy walkthrough    |  Click [here](https://aka.ms/B2CWebinar-Week4-TimeZone1) to join | [Add to Calendar](https://awesomemining.blob.core.windows.net/azureadb2cseries/Custom%20policies%20part%202%20Policy%20walkthrough%20-%2011th%20May%202020%20-%202pm%20PDT.ics)
+12th May 2020  |  8-9 AM |  Custom policies part 2: Policy walkthrough   |  Click [here](https://aka.ms/B2CWebinar-Week4-TimeZone2) to join | [Add to Calendar](https://awesomemining.blob.core.windows.net/azureadb2cseries/Custom%20policies%20part%202%20Policy%20walkthrough%20-%2012th%20May%202020%20-%208am%20PDT.ics)
+18th May 2020  |  2-3 PM | Custom policies part 3: Troubleshooting  |  Click [here](https://aka.ms/B2CWebinar-Week5-TimeZone1) to join | [Add to Calendar](https://awesomemining.blob.core.windows.net/azureadb2cseries/Custom%20policies%20part%203%20Troubleshooting%20-%2018th%20May%202020%20-%202pm%20PDT.ics)
+19th May 2020  | 8-9 AM  |  Custom policies part 3: Troubleshooting |  Click [here](https://aka.ms/B2CWebinar-Week5-TimeZone2) to join | [Add to Calendar](https://awesomemining.blob.core.windows.net/azureadb2cseries/Custom%20policies%20part%203%20Troubleshooting%20-%2019th%20May%202020%20-%208am%20PDT.ics)
 
 Note: Times are in Pacific Time (UTC-7)  and the links become functional during the session.
 
