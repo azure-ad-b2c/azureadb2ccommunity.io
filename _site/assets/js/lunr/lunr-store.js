@@ -53,10 +53,22 @@ var store = [{
         "url": "http://localhost:4000/portfolio/ginger-gulp-identity/",
         "teaser": "http://localhost:4000/assets/images/unsplash-gallery-image-3-th.jpg"
       },{
-        "title": "You are invited - Webinar series",
-        "excerpt":"Identity protocols and Azure AD B2C custom policy deep-dive series Given the COVID-19 situation, we understand how rapidly your digital space is evolving and to help with that, Microsoft invites you to join our Azure Active Directory B2C team and B2C Community Partners for a virtual B2C custom policy training...","categories": [],
+        "title": "You are invited - Azure AD B2C Webinar series",
+        "excerpt":"Identity protocols and Azure AD B2C custom policy deep-dive series Given the COVID-19 situation, we understand how rapidly your digital space is evolving. To with that, Azure Active Directory B2C team and B2C Community Partners invite you to a virtual B2C custom policy training series. At the end of the...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/training/identity-protocols-custom-policies/",
+        "teaser": null
+      },{
+        "title": "You are invited - Azure AD B2C Webinar series",
+        "excerpt":"Identity protocols and Azure AD B2C custom policy deep-dive series webinar recordings   Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 1   Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 2   ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/training/recordings/",
+        "teaser": null
+      },{
+        "title": "You are invited - Azure AD B2C Webinar series",
+        "excerpt":"Introduction Progressive profiling allows you to create frictionless user journeys within Azure AD B2C, making sure that users only need to provide the minimum information before interacting with various parts of your service. When users interact with part of your service which requires further information about the user, gather more...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/training/labs/",
         "teaser": null
       },{
         "title": "What is Azure AD B2C?",

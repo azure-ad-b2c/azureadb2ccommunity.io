@@ -33,6 +33,10 @@ training:
     children:
       - title: "Identity Protocols and Custom policies"
         url: /training/identity-protocols-custom-policies/
+      - title: "Recordings"
+        url: /training/recordings/
+      - title: "Labs"
+        url: /training/labs/
   - title: Basics
     children:
       - title: "What is Azure AD B2C?"
