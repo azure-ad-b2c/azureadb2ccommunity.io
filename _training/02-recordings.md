@@ -1,5 +1,5 @@
 ---
-title: "You are invited - Azure AD B2C Webinar series"
+title: "Identity protocols and Azure AD B2C custom policy deep-dive series webinar recordings"
 permalink: /training/recordings/
 excerpt: "Learn the usecases of Azure AD B2C"
 last_modified_at: 2020-04-06T21:36:11-04:00
@@ -9,8 +9,6 @@ toc: true
 author: Vinu Gunasekaran
 comment: true
 ---
-
-## Identity protocols and Azure AD B2C custom policy deep-dive series webinar recordings
 
 ### Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 1
 

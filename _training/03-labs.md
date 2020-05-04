@@ -1,5 +1,5 @@
 ---
-title: "You are invited - Azure AD B2C Webinar series"
+title: "Take home labs"
 permalink: /training/labs/
 excerpt: "Learn the usecases of Azure AD B2C"
 last_modified_at: 2020-04-06T21:36:11-04:00
