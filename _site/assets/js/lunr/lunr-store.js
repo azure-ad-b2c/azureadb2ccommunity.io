@@ -59,13 +59,13 @@ var store = [{
         "url": "http://localhost:4000/training/identity-protocols-custom-policies/",
         "teaser": null
       },{
-        "title": "You are invited - Azure AD B2C Webinar series",
-        "excerpt":"Identity protocols and Azure AD B2C custom policy deep-dive series webinar recordings   Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 1   Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 2   ","categories": [],
+        "title": "Identity protocols and Azure AD B2C custom policy deep-dive series webinar recordings",
+        "excerpt":"Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 1   Recording            Presentation slides      Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 2   Recording            Presentation slides     ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/training/recordings/",
         "teaser": null
       },{
-        "title": "You are invited - Azure AD B2C Webinar series",
+        "title": "Take home labs",
         "excerpt":"Introduction Progressive profiling allows you to create frictionless user journeys within Azure AD B2C, making sure that users only need to provide the minimum information before interacting with various parts of your service. When users interact with part of your service which requires further information about the user, gather more...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/training/labs/",

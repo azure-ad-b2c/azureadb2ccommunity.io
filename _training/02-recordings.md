@@ -10,11 +10,22 @@ author: Vinu Gunasekaran
 comment: true
 ---
 
-### Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 1
+## Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 1
 
+### Recording
 
+{% include video id="WgWb7Y0Tm50" provider="youtube" %}
 
+### Presentation slides
 
-### Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 2
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/A4yYsjjfAPbTOh" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 
+## Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 2
 
+### Recording
+
+{% include video id="RZ9588U7xT4" provider="youtube" %}
+
+### Presentation slides
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/Hn672sWzBjMSiD" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
