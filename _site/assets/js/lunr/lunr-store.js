@@ -60,7 +60,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Identity protocols and Azure AD B2C custom policy deep-dive series webinar recordings",
-        "excerpt":"Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 1   Recording            Presentation slides      Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 2   Recording            Presentation slides     ","categories": [],
+        "excerpt":"Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 1   Recording            Presentation slides      Azure AD B2C Webinar Series: Identity Protocols OIDC and OAuth2 part 2   Recording            Presentation slides      Azure AD B2C Webinar Series: Custom Policies Part 1   Recording            Presentation slides     ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/training/recordings/",
         "teaser": null

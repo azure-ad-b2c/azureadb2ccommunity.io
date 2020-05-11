@@ -29,3 +29,14 @@ comment: true
 ### Presentation slides
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/Hn672sWzBjMSiD" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+
+
+## Azure AD B2C Webinar Series: Custom Policies Part 1
+
+### Recording
+
+{% include video id="I-CtEGQjcic" provider="youtube" %}
+
+### Presentation slides
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/8QzAHC9StO6Fu4" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
