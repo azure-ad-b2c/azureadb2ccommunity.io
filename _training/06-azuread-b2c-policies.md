@@ -25,12 +25,12 @@ Sign-up or sign-in is a common consumer enrollment experience.  These types of e
 
 Our first policy example is "Sign-up or sign-in". Using a sign-up or sign-in policy, users can: sign-in with a local account. Or sign-in with any external account, such as Facebook or ADFS. Create new local account. Or reset their password. All those actions are configured in the policy. 
 
-![Sign-up or sign-in policy](/assets/images/docs/policy-susi.png)
+![Sign-up or sign-in policy](/azureadb2ccommunity.io/assets/images/docs/policy-susi.png)
 
 
 Maintaining a user's information is important.  Utilizing the "Edit profile" policy will allow your users to maintain their information after successfully signing in with a social, local or external account.
 
-![Profile edit policy](/assets/images/docs//profile-edit.png)
+![Profile edit policy](/azureadb2ccommunity.io/assets/images/docs//profile-edit.png)
 
 ## Configuration
 

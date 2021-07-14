@@ -13,4 +13,4 @@ Your application, regardless if it is a web, mobile, desktop or single page appl
 
 The steps inside a policy can vary from policy to policy. It is truly based on set of steps you specify.
  
-![A policy](/assets/images/docs/app-integration.png) 
+![A policy](/azureadb2ccommunity.io/assets/images/docs/app-integration.png) 

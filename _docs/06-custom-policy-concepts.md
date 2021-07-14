@@ -30,7 +30,7 @@ Azure AD B2C is backed by a global, highly available, and secure **cloud identit
 ### Sign-in with local account flow
 This diagram depicts the Sign-in with local account flow using a "sign-up or sign-in" policy. 
 
-![Claims exchange with local account](/assets/images/docs/claims_exchange_local_account.png)
+![Claims exchange with local account](/azureadb2ccommunity.io/assets/images/docs/claims_exchange_local_account.png)
 
 1. The user starts their journey by opening their application and clicking on sign-in button. The user is redirected to Azure AD B2C to complete the sign-up or sign-in flow. 
 
@@ -58,7 +58,7 @@ But, in this case Azure AD B2C also invokes a REST API, to further integrate wit
 
 In the final step B2C issues an id token back to the application.
 
-![Claims exchange with social account and REST API](/assets/images/docs/claims_exchange_social_with_rest_api.png)
+![Claims exchange with social account and REST API](/azureadb2ccommunity.io/assets/images/docs/claims_exchange_social_with_rest_api.png)
 
 ### Claims Exchange
 
@@ -66,7 +66,7 @@ Let’s take a closer look at following diagram which illustrates how Azure AD B
 
 The relying party application, also known as your Application, sends an authentication request to B2C. B2C may send or receive claims from the end-user, social identity provider, multi-factor authentication provider, REST API and with the Directory service (Azure AD). 
 
-![Claims Exchange flow](/assets/images/docs/claims_exchange_flow.png)
+![Claims Exchange flow](/azureadb2ccommunity.io/assets/images/docs/claims_exchange_flow.png)
 
 
 During the policy execution, Azure AD B2C stores the claims in a temporary memory called a "claims bag". This is stored in real-time to be utilized for any further steps in the policy. 
@@ -131,13 +131,13 @@ Here are some examples of claims transformations:
 - Null a claim 
 - Check if a claim has value and return a boolean result
 
-![Claims](/assets/images/docs/claims.png)
+![Claims](/azureadb2ccommunity.io/assets/images/docs/claims.png)
 
 ## Technical profile
 
 The following will dive into the underlying components of Azure AD B2C, these components are referred to as Technical Profiles which drive the functionality of your Azure AD B2C policy. All interactions with partners to perform claims exchanges are completed via technical profiles. 
 
-![Claims exchange flow](/assets/images/docs/claims_exchange_flow2.png)
+![Claims exchange flow](/azureadb2ccommunity.io/assets/images/docs/claims_exchange_flow2.png)
 
 You can think of Technical Profiles like functions. They can: 
 - Send claims to the partner - "input claims"
@@ -158,7 +158,7 @@ There are various types of technical profile:
 
 All types of technical profiles share the same concept as per the following diagram. <!--Azure AD B2C reads claims from the claims bag, sends input claims, run claims transformation, and communicate with the configured party, such as an identity provider, REST API, or Azure AD directory services.  After the process finishes, the technical profile returns the output claims and may run output claims transformation. Regardless of the party the technical profile interacts with, after any claims transformation is executed, the output claims from the technical profile are immediately stored in the claims bag.-->
 
-![Technical profile execution](/assets/images/docs/tp.png)
+![Technical profile execution](/azureadb2ccommunity.io/assets/images/docs/tp.png)
 
 <!--If broken down in each one of the components, you can see there are 7 primary steps in order to create a session. This diagram shows how a technical profile is processed. Regardless of which type of technical profile selected, after any technical profile is executed, the output claims from the technical profile are immediately stored in the claims bag. Let’s quickly walk through the steps:
 -->
@@ -222,7 +222,7 @@ A validation technical profile is an ordinary technical profile from any type(pr
 
 The most common use of a Validation technical profile is to validate the username and password the user provides during **Sign-In**.
 
-![Validation technical profile](/assets/images/docs/validation-tp.png)
+![Validation technical profile](/azureadb2ccommunity.io/assets/images/docs/validation-tp.png)
 
 Another example during **Sign-up**, before allowing a user to create their account, Azure AD B2C must check if the account already exists. 
 
@@ -241,7 +241,7 @@ You can use REST API technical profile to:
 - **Enrich user data by further integrating with corporate line-of-business services** - Your RESTful service can receive the user's email address, query the CRM platform, and return the user's loyalty number to Azure AD B2C. The return claims can be stored in the user's Azure AD account, evaluated in the next Orchestration Steps, included in the id token or a combination.
 - **Run custom business logic** - You can send push notifications, update corporate databases, run a user migration process, manage permissions, audit databases, and perform other actions.
 
-![REST API technical profile](/assets/images/docs/rest-api.png) 
+![REST API technical profile](/azureadb2ccommunity.io/assets/images/docs/rest-api.png) 
 
 ## User Journey
 
@@ -260,18 +260,18 @@ In the majority of cases, the last orchestration step type issues the token and 
 
 In the following example, we have 7 steps. But a user may not run through all of them. Because a step may contain **preconditions** instructing the policy to skip to the next orchestration step, based on claim comparison or claim existence. This is very similar to an **If** and **Else** statement.
 
-![User journey](/assets/images/docs/claims_exchange_flow3.png)
+![User journey](/azureadb2ccommunity.io/assets/images/docs/claims_exchange_flow3.png)
 
 ### Local and social accounts user journey
 The sign-up or sign-in user journey contains the following orchestration steps:
 
 1. Initiates an identity provider selection: Shows the identity provider options to user. If user provides credentials on this screen, then they have chosen to login with a local account. If the user clicks on one of the social identity providers, B2C will move directly to the next step to handle this.
 
-    ![Sign-up or sign-in]/assets/images/docs/uj-local-and-social-account-susi.png)
+    ![Sign-up or sign-in]/azureadb2ccommunity.io/assets/images/docs/uj-local-and-social-account-susi.png)
 
 1. If user had signed-in locally (in the previous orchestration step/s), skip this step, since in this step we want to handle external account logins. In this step sign in with the social provider selected earlier by executing its respective technical profile, or register new user with a local account. 
 
-    ![Sign-up or sign-in with social account](/assets/images/docs/uj-local-and-social-account-susi-second.png)
+    ![Sign-up or sign-in with social account](/azureadb2ccommunity.io/assets/images/docs/uj-local-and-social-account-susi-second.png)
 
 2. If local account had been chosen earlier (user had signed-in or signed-up with a local account), skip this step, otherwise lookup the social account by the social account unique id obtained from the social identity provider and read its attributes from the Azure AD B2C directory. 
 
@@ -279,7 +279,7 @@ The sign-up or sign-in user journey contains the following orchestration steps:
 
 3. If a social account representation of a user was found skip this step. Otherwise since this user logging in for the first time with their social account, present the user a registration form. Once the user submits this page create the account in the directory. The Self-Asserted technical profile invokes a validation technical profile that actually writes the account into the directory.
 
-    ![Social account sign-up](/assets/images/docs/uj-social-account-sign-up.png)
+    ![Social account sign-up](/azureadb2ccommunity.io/assets/images/docs/uj-social-account-sign-up.png)
 
 4. If this is a social account login, skip this step, else read all desired attributes from the user signed in with a local account from the user directory.
 
@@ -360,7 +360,7 @@ Each **orchestration step** calls a Technical Profile. Technical profiles provid
 
 An orchestration step may have one or more **preconditions** to determine if the orchestration step should execute during this flow or skipped.
 
-![Policy execution](/assets/images/docs/policy-execution.png)
+![Policy execution](/azureadb2ccommunity.io/assets/images/docs/policy-execution.png)
 
 ### Policy file structure
 
@@ -377,7 +377,7 @@ The child policy at any level can inherit from the parent policy and extend it b
 There is no limit on the number of levels in this chained structure. 
 
 
-![Policy inheritance](/assets/images/docs/policy-inheritance.png)
+![Policy inheritance](/azureadb2ccommunity.io/assets/images/docs/policy-inheritance.png)
 
 - A relying party application, such as a web, mobile, or desktop application, calls the relying party (RP) policy. 
  - The RP policy configures the list of claims the relying party application receives as part of the token that is issued. 
@@ -401,14 +401,14 @@ For each relying party policy created, Azure AD B2C provides you  the endpoints 
     - `https://tenant-name.b2clogin.com/tenant-name.onmicrosoft.com/policy-id/oauth2/v2.0/logout`
 
 
-<!-- ![OAuth2 endpoints](/assets/images/docs/endpoints.png) -->
+<!-- ![OAuth2 endpoints](/azureadb2ccommunity.io/assets/images/docs/endpoints.png) -->
 
 ## Customize your policy 
 
 ### Content definitions
 A content definition allows linking a page type referenced in a Self-Asserted technical profile and the HTML template, localization and page contract (see later).
 
-![Content definitions](/assets/images/docs/content-definition.png)
+![Content definitions](/azureadb2ccommunity.io/assets/images/docs/content-definition.png)
 
 The self-asserted technical profile points to a content definition identifier. The content definition contains:
 - The URL of the HTML template

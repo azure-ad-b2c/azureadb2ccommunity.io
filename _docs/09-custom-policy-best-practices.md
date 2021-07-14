@@ -22,7 +22,7 @@ Within an Azure AD B2C custom policy, you can integrate your own business logic 
 
 In the following example, the Facebook policy is configured in the base policy, while in the extension policy you must specify the Facebook application Id, the scopes to use and the information you want to retrieve from Facebook. The extension contains the values that are related to your environment like the scopes that are relevant to you in the interaction with Facebook.  
 
-![Facebook customization](/assets/images/docs/facebook-extension.png)
+![Facebook customization](/azureadb2ccommunity.io/assets/images/docs/facebook-extension.png)
 
 ## Including technical profile
 You can create a technical profile that is based on another one. Use the IncludeTechnicalProfile element to customize your technical profile.
@@ -35,7 +35,7 @@ For example `AAD-UserReadUsingAlternativeSecurityId-NoError` includes `AAD-UserR
 
 <!--So, instead of creating new technical profile with all the XML elements. You can create a new one based on another one.-->
 
-![Include a technical profile](/assets/images/docs/include-tp.png)
+![Include a technical profile](/azureadb2ccommunity.io/assets/images/docs/include-tp.png)
 
 <!--So may ask: What is the benefits of creating a technical profile to include versus just overwriting it?-->
 
@@ -45,7 +45,7 @@ For example `AAD-UserReadUsingAlternativeSecurityId-NoError` includes `AAD-UserR
 
 - **Overwrite**. Overwrite is always done in a policy that inherits from the policy where the technical profile is declared. When you overwrite, you do not change the technical profile name. You can overwrite a technical profile that is configured in any policy which is inherited by your current working policy file.
 
-![Include a technical profile versus overwriting](/assets/images/docs/include-tp-2.png) 
+![Include a technical profile versus overwriting](/azureadb2ccommunity.io/assets/images/docs/include-tp-2.png) 
 
 
 ## Escape XML invalid characters

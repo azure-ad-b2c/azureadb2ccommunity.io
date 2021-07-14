@@ -17,13 +17,13 @@ You can customize the look and feel of any Self-Asserted technical profile. To c
 
 During run time, Azure AD B2C will loads your HTML template and merge the Azure AD B2C user interface elements into the `<div id="api"></div>` element located in the custom HTML content.
 
-![Content definitions](/assets/images/docs/ui-customization.png)
+![Content definitions](/azureadb2ccommunity.io/assets/images/docs/ui-customization.png)
 
 ## Localization
 Localization allows you to support multiple locales or languages in the policy for the user journeys. The localization support in policies allows you to:
 - Set up the explicit list of the supported languages in a policy and pick a default language.
 - Provide language-specific strings and collection
 
-![Localization](/assets/images/docs/localization.png)
+![Localization](/azureadb2ccommunity.io/assets/images/docs/localization.png)
 
  

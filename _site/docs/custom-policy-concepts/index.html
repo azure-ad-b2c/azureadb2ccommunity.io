@@ -301,7 +301,7 @@
 <h3 id="sign-in-with-local-account-flow">Sign-in with local account flow</h3>
 <p>This diagram depicts the Sign-in with local account flow using a “sign-up or sign-in” policy.</p>
 
-<p><img src="/assets/images/docs/claims_exchange_local_account.png" alt="Claims exchange with local account" /></p>
+<p><img src="/azureadb2ccommunity.io/assets/images/docs/claims_exchange_local_account.png" alt="Claims exchange with local account" /></p>
 
 <ol>
   <li>
@@ -336,7 +336,7 @@ The user provides their email and password. Internally, the email address is cro
 
 <p>In the final step B2C issues an id token back to the application.</p>
 
-<p><img src="/assets/images/docs/claims_exchange_social_with_rest_api.png" alt="Claims exchange with social account and REST API" /></p>
+<p><img src="/azureadb2ccommunity.io/assets/images/docs/claims_exchange_social_with_rest_api.png" alt="Claims exchange with social account and REST API" /></p>
 
 <h3 id="claims-exchange">Claims Exchange</h3>
 
@@ -344,7 +344,7 @@ The user provides their email and password. Internally, the email address is cro
 
 <p>The relying party application, also known as your Application, sends an authentication request to B2C. B2C may send or receive claims from the end-user, social identity provider, multi-factor authentication provider, REST API and with the Directory service (Azure AD).</p>
 
-<p><img src="/assets/images/docs/claims_exchange_flow.png" alt="Claims Exchange flow" /></p>
+<p><img src="/azureadb2ccommunity.io/assets/images/docs/claims_exchange_flow.png" alt="Claims Exchange flow" /></p>
 
 <p>During the policy execution, Azure AD B2C stores the claims in a temporary memory called a “claims bag”. This is stored in real-time to be utilized for any further steps in the policy.</p>
 
@@ -450,13 +450,13 @@ An example of this is setting the claim called <code class="language-plaintext h
   <li>Check if a claim has value and return a boolean result</li>
 </ul>
 
-<p><img src="/assets/images/docs/claims.png" alt="Claims" /></p>
+<p><img src="/azureadb2ccommunity.io/assets/images/docs/claims.png" alt="Claims" /></p>
 
 <h2 id="technical-profile">Technical profile</h2>
 
 <p>The following will dive into the underlying components of Azure AD B2C, these components are referred to as Technical Profiles which drive the functionality of your Azure AD B2C policy. All interactions with partners to perform claims exchanges are completed via technical profiles.</p>
 
-<p><img src="/assets/images/docs/claims_exchange_flow2.png" alt="Claims exchange flow" /></p>
+<p><img src="/azureadb2ccommunity.io/assets/images/docs/claims_exchange_flow2.png" alt="Claims exchange flow" /></p>
 
 <p>You can think of Technical Profiles like functions. They can:</p>
 <ul>
@@ -480,7 +480,7 @@ An example of this is setting the claim called <code class="language-plaintext h
 
 <p>All types of technical profiles share the same concept as per the following diagram. <!--Azure AD B2C reads claims from the claims bag, sends input claims, run claims transformation, and communicate with the configured party, such as an identity provider, REST API, or Azure AD directory services.  After the process finishes, the technical profile returns the output claims and may run output claims transformation. Regardless of the party the technical profile interacts with, after any claims transformation is executed, the output claims from the technical profile are immediately stored in the claims bag.--></p>
 
-<p><img src="/assets/images/docs/tp.png" alt="Technical profile execution" /></p>
+<p><img src="/azureadb2ccommunity.io/assets/images/docs/tp.png" alt="Technical profile execution" /></p>
 
 <!--If broken down in each one of the components, you can see there are 7 primary steps in order to create a session. This diagram shows how a technical profile is processed. Regardless of which type of technical profile selected, after any technical profile is executed, the output claims from the technical profile are immediately stored in the claims bag. Let’s quickly walk through the steps:
 -->
@@ -566,7 +566,7 @@ An example of this is setting the claim called <code class="language-plaintext h
 
 <p>The most common use of a Validation technical profile is to validate the username and password the user provides during <strong>Sign-In</strong>.</p>
 
-<p><img src="/assets/images/docs/validation-tp.png" alt="Validation technical profile" /></p>
+<p><img src="/azureadb2ccommunity.io/assets/images/docs/validation-tp.png" alt="Validation technical profile" /></p>
 
 <p>Another example during <strong>Sign-up</strong>, before allowing a user to create their account, Azure AD B2C must check if the account already exists.</p>
 
@@ -587,7 +587,7 @@ An example of this is setting the claim called <code class="language-plaintext h
   <li><strong>Run custom business logic</strong> - You can send push notifications, update corporate databases, run a user migration process, manage permissions, audit databases, and perform other actions.</li>
 </ul>
 
-<p><img src="/assets/images/docs/rest-api.png" alt="REST API technical profile" /></p>
+<p><img src="/azureadb2ccommunity.io/assets/images/docs/rest-api.png" alt="REST API technical profile" /></p>
 
 <h2 id="user-journey">User Journey</h2>
 
@@ -605,7 +605,7 @@ An example of this is setting the claim called <code class="language-plaintext h
 
 <p>In the following example, we have 7 steps. But a user may not run through all of them. Because a step may contain <strong>preconditions</strong> instructing the policy to skip to the next orchestration step, based on claim comparison or claim existence. This is very similar to an <strong>If</strong> and <strong>Else</strong> statement.</p>
 
-<p><img src="/assets/images/docs/claims_exchange_flow3.png" alt="User journey" /></p>
+<p><img src="/azureadb2ccommunity.io/assets/images/docs/claims_exchange_flow3.png" alt="User journey" /></p>
 
 <h3 id="local-and-social-accounts-user-journey">Local and social accounts user journey</h3>
 <p>The sign-up or sign-in user journey contains the following orchestration steps:</p>
@@ -614,12 +614,12 @@ An example of this is setting the claim called <code class="language-plaintext h
   <li>
     <p>Initiates an identity provider selection: Shows the identity provider options to user. If user provides credentials on this screen, then they have chosen to login with a local account. If the user clicks on one of the social identity providers, B2C will move directly to the next step to handle this.</p>
 
-    <p>![Sign-up or sign-in]/assets/images/docs/uj-local-and-social-account-susi.png)</p>
+    <p>![Sign-up or sign-in]/azureadb2ccommunity.io/assets/images/docs/uj-local-and-social-account-susi.png)</p>
   </li>
   <li>
     <p>If user had signed-in locally (in the previous orchestration step/s), skip this step, since in this step we want to handle external account logins. In this step sign in with the social provider selected earlier by executing its respective technical profile, or register new user with a local account.</p>
 
-    <p><img src="/assets/images/docs/uj-local-and-social-account-susi-second.png" alt="Sign-up or sign-in with social account" /></p>
+    <p><img src="/azureadb2ccommunity.io/assets/images/docs/uj-local-and-social-account-susi-second.png" alt="Sign-up or sign-in with social account" /></p>
   </li>
   <li>
     <p>If local account had been chosen earlier (user had signed-in or signed-up with a local account), skip this step, otherwise lookup the social account by the social account unique id obtained from the social identity provider and read its attributes from the Azure AD B2C directory.</p>
@@ -629,7 +629,7 @@ An example of this is setting the claim called <code class="language-plaintext h
   <li>
     <p>If a social account representation of a user was found skip this step. Otherwise since this user logging in for the first time with their social account, present the user a registration form. Once the user submits this page create the account in the directory. The Self-Asserted technical profile invokes a validation technical profile that actually writes the account into the directory.</p>
 
-    <p><img src="/assets/images/docs/uj-social-account-sign-up.png" alt="Social account sign-up" /></p>
+    <p><img src="/azureadb2ccommunity.io/assets/images/docs/uj-social-account-sign-up.png" alt="Social account sign-up" /></p>
   </li>
   <li>
     <p>If this is a social account login, skip this step, else read all desired attributes from the user signed in with a local account from the user directory.</p>
@@ -716,7 +716,7 @@ This orchestration step will execute a technical profile, therefore the precondi
 
 <p>An orchestration step may have one or more <strong>preconditions</strong> to determine if the orchestration step should execute during this flow or skipped.</p>
 
-<p><img src="/assets/images/docs/policy-execution.png" alt="Policy execution" /></p>
+<p><img src="/azureadb2ccommunity.io/assets/images/docs/policy-execution.png" alt="Policy execution" /></p>
 
 <h3 id="policy-file-structure">Policy file structure</h3>
 
@@ -732,7 +732,7 @@ This orchestration step will execute a technical profile, therefore the precondi
 
 <p>There is no limit on the number of levels in this chained structure.</p>
 
-<p><img src="/assets/images/docs/policy-inheritance.png" alt="Policy inheritance" /></p>
+<p><img src="/azureadb2ccommunity.io/assets/images/docs/policy-inheritance.png" alt="Policy inheritance" /></p>
 
 <ul>
   <li>A relying party application, such as a web, mobile, or desktop application, calls the relying party (RP) policy.</li>
@@ -768,14 +768,14 @@ This orchestration step will execute a technical profile, therefore the precondi
   </li>
 </ul>
 
-<!-- ![OAuth2 endpoints](/assets/images/docs/endpoints.png) -->
+<!-- ![OAuth2 endpoints](/azureadb2ccommunity.io/assets/images/docs/endpoints.png) -->
 
 <h2 id="customize-your-policy">Customize your policy</h2>
 
 <h3 id="content-definitions">Content definitions</h3>
 <p>A content definition allows linking a page type referenced in a Self-Asserted technical profile and the HTML template, localization and page contract (see later).</p>
 
-<p><img src="/assets/images/docs/content-definition.png" alt="Content definitions" /></p>
+<p><img src="/azureadb2ccommunity.io/assets/images/docs/content-definition.png" alt="Content definitions" /></p>
 
 <p>The self-asserted technical profile points to a content definition identifier. The content definition contains:</p>
 <ul>
