@@ -5,7 +5,7 @@ header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/mm-home-page-feature.jpg
   actions:
-    - label: "Stackoverflow"
+    - label: "Stack Overflow"
       icon: "fab fa-stack-overflow"
       url: "https://stackoverflow.com/questions/tagged/azure-ad-b2c"
     - label: "GitHub"
