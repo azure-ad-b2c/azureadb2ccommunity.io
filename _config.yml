@@ -105,7 +105,7 @@ author:
       url: "https://woodgrovegroceriesb2cdemo.azurewebsites.net/"
     - label: "Offical docs"
       icon: "fab fa-microsoft"
-      url: "https://azure.microsoft.com/en-us/services/active-directory-b2c/"
+      url: "https://aka.ms/aadb2c"
     - label: "YouTube"
       icon: "fab fa-youtube"
       url: "https://www.youtube.com/results?search_query=azure+ad+b2c"
